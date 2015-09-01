@@ -72,7 +72,7 @@ Line separated please
 Code is provided in Java to run STIN from a text file
 Feel free to rewrite this in any language
 
-Problem 3 - Pyramid
+Problem 3 - Stairs
 Given an integer input N, print a staircase out of height N. For example, given
 the input 4, print out the following staircase:
 
@@ -84,7 +84,7 @@ the input 4, print out the following staircase:
 
 Input format - from text file:
 The first line contains an integer with the number of test cases.
-The following lines are the heights of the pyramids
+The following lines are the heights of the stairs
 
 Ex.
 2
@@ -92,7 +92,7 @@ Ex.
 4
 
 Output format - console
-Print to console line separated pyramids
+Print to console line separated stairs
     #
    ##
   ###
