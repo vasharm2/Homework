@@ -23,7 +23,7 @@ Do you have git? If yes, skip 1.
 14. Once you are done with the pull request, PAT YOURSELF ON THE BACK!!!
 15. wait for a response (either accepting or rejecting the merge). Poke your Course Assistant if it takes more than a few hours.
 
-Repeat steps 7 through 12 for subsequent PSets!
+Repeat steps 10 through 15 for subsequent PSets!
 SEE EXAMPLE ENTRY IN PS1 for SUBMISSION FORMAT!!!
 
 #### I UNDERSTAND THAT GIT IS VERY DIFFICULT TO PICK UP INITIALLY. IF YOU HAVE ANY TROUBLE OR HAVE ANY QUESTIONS, PLEASE FEEL FREE TO REACH OUT TO ME (ARAVIND SUNDARESAN) PERSONALLY. YOU CAN REACH ME AT SUNDRSN2@ILLINOIS.EDU, OR ON FACEBOOK.
