@@ -8,10 +8,7 @@ Do you have git? If yes, skip 1.
 1. For Windows : Download git bash - https://git-for-windows.github.io and install.
 2. For Mac: open terminal and paste this command and hit enter:  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install git
 3. For Linux: sudo apt-get install git (replace apt-get with your OS's package manager)
-4. On https://github.com/CS196Illinois/Submissions, Fork the repository (top right corner) to your own Github
-
-![alt tag](http://i.imgur.com/ZsWvoKw.png)
-
+4. On https://github.com/CS196Illinois/Submissions, Fork the repository (top right corner) to your own Github ![alt tag](http://i.imgur.com/ZsWvoKw.png)
 5. Run the following command in git bash (or terminal for Mac users): ```git clone https://github.com/[YOUR_GITHUB_USERNAME]/Submissions```. Replace [YOUR_GITHUB_USERNAME] with your username.
 6. Make a new folder and name it your NETID
 7. copy the files from this weeks PSet directory into the NETID folder
