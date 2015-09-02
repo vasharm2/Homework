@@ -14,7 +14,7 @@ def is_ana_palin(word):
     return True
 
 with open('Anagram.txt', 'r') as f:
-    data = f.readlines()
+    data = f.read().split('\n')
 
 nCases = int(data[0])
 todo=[i.strip() for i in data[1:1+nCases]]
