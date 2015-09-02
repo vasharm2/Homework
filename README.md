@@ -9,3 +9,5 @@ This is where you submit your code
   3. Do your work
 3. Once you think you are done submit a pull request to the submission branch of the submission repo
 4. Wait for a response
+
+SEE EXAMPLE ENTRY IN PS1!!!
