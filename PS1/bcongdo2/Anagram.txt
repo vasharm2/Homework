@@ -1,0 +1,10 @@
+9
+aabb
+false
+abba
+xyyxy
+axsx
+racerac
+racecar
+seveneves
+sevenvees
