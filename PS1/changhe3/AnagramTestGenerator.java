@@ -30,7 +30,7 @@ public class AnagramTestGenerator {
             lines.add(generate(false, 10));
         }
         try {
-            Files.write(Paths.get("src/test.txt"), lines, StandardCharsets.UTF_8);
+            Files.write(Paths.get("AnagramTestExample.txt"), lines, StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }

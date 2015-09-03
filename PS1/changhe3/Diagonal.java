@@ -70,7 +70,7 @@ public class Diagonal {
     }
 
     public static void main(String[] args) {
-        File file = new File("src/Diagonal.txt");
+        File file = new File("Diagonal.txt");
         try {
             Scanner scan = new Scanner(file);
             int numberOfCases = scan.nextInt();

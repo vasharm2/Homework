@@ -1,4 +1,4 @@
-import java.io.File;
+﻿import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -68,7 +68,7 @@ public class Anagram {
     }
 
     public static void main(String[] args) {
-        File file = new File("src/test.txt");
+        File file = new File("Anagram.txt");
         try {
             Scanner scan = new Scanner(file);
             int numberOfCases = scan.nextInt();
