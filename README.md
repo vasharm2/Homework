@@ -1,5 +1,5 @@
 # Submissions
-This is where you submit your code 
+This is where you submit your code. We understand and accept the fact that you can see everyone else's submissions. We are not going to do anything to prevent you from cheating. Keep in mind that this is an Honors course, meant for enriching your knowledge. You gain absolutely nothing from cheating. 
 
 ##How do I set up git and submit homework assignments?
 
