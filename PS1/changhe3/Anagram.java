@@ -1,4 +1,4 @@
-import java.util.*;
+﻿import java.util.*;
 import java.io.*;
 
 /*
@@ -66,7 +66,7 @@ public class Anagram {
 	}
 
 	public static void main(String[] args) {
-		File file = new File("src/test.txt");
+		File file = new File("Anagram.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
