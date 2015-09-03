@@ -41,27 +41,35 @@ public class Anagram {
 
     public static boolean anagram(String input) {
         char[] chars = input.toCharArray();
+        //Convert the input into the char array and sort it, so that the same characters will come together.
         Arrays.sort(chars);
-        int[] occurrenceOfSingleChar = new int[]{0};
+        //Note that this is just an integer value wrapped as an int array. This is done because only through this way
+        //could the value be modified in a method, the code more organized.
+        int[] occurrenceOfOddChar = new int[]{0};
+        //This loop keeps track of the current character traversed throught, the numver of the current number,
+        // and number of characters that have an odd number of occurence. Return false if that number is greater
+        // than one.
         char currentChar = chars[0];
         int length = 0;
         for (char c : chars) {
             if (c == currentChar) {
                 length++;
             } else {
-                checkLength(length, occurrenceOfSingleChar);
-                if (occurrenceOfSingleChar[0] > 1) return false;
+                checkLength(length, occurrenceOfOddChar);
+                if (occurrenceOfOddChar[0] > 1) return false;
                 currentChar = c;
                 length = 1;
             }
         }
-        checkLength(length, occurrenceOfSingleChar);
-        return occurrenceOfSingleChar[0] < 2;
+        //Call method checklength(int, int[]) again for the last few characters in the char array.
+        checkLength(length, occurrenceOfOddChar);
+        //Check if the last call of checklength(int, int[]) has incremented the occurrenceOfOddChar[0]
+        return occurrenceOfOddChar[0] < 2;
     }
 
-    private static void checkLength(int length, int[] occurrenceOfSingleChar) {
+    private static void checkLength(int length, int[] occurrenceOfOddChar) {
         if (length % 2 == 1) {
-            occurrenceOfSingleChar[0]++;
+            occurrenceOfOddChar[0]++;
         } else if (length < 1) {
             throw new IllegalStateException();
         }

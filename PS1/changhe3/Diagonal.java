@@ -35,14 +35,17 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
     public static int diagonal(int[][] input) {
+        //Check if the input is a square matrix.
         for (int[] ints : input) {
             if (ints.length != input.length) throw new IllegalArgumentException("Not a square matrix!");
         }
+        //Multiply the value for the main diagonal and for the other.
         return diagonal(input, Direction.Main) * diagonal(input, Direction.Other);
     }
 
     public static int diagonal(int[][] input, Direction direction) {
         int size = input.length;
+        //initalize the initial and the incremental values for row and colomn coordinates and assign values to them.
         int r_init, r_offset, c_init, c_offset;
         switch (direction) {
             case Main:
@@ -61,6 +64,7 @@ public class Diagonal {
                 throw new IllegalStateException();
         }
         int r = r_init, c = c_init, sum = 0;
+        //Add through the diagonal and return the sum.
         while ((0 <= r && r < size) && (0 <= c && c < size)) {
             sum += input[r][c];
             r += r_offset;
@@ -90,6 +94,9 @@ public class Diagonal {
         }
     }
 
+    /*
+    * Main represents the diagonal from upper-left to lower-right. Other signifies the other.
+    */
     public enum Direction {Main, Other}
 
 }

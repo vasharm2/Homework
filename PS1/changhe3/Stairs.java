@@ -34,6 +34,7 @@ public class Stairs {
 
 
     public static void stairs(int input) {
+        //This code is pretty self-explanatory...
         StringBuilder builder = new StringBuilder();
         for (int i = 1; i <= input; i++) {
             appendChar(builder, ' ', input - i);
@@ -44,9 +45,12 @@ public class Stairs {
         return;
     }
 
-    private static void appendChar(StringBuilder builder, char c, int times) {
-        if (times < 0) throw new IllegalArgumentException();
-        for (int i = 0; i < times; i++) {
+    /*
+    * Add a certain number of the same character to a StringBuilder
+    */
+    private static void appendChar(StringBuilder builder, char c, int num) {
+        if (num < 0) throw new IllegalArgumentException();
+        for (int i = 0; i < num; i++) {
             builder.append(c);
         }
     }
