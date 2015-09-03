@@ -25,7 +25,7 @@ Submissions<br />
 │             ├── Stairs.java<br />
 │             └── Stairs.txt<br />
 └── README.md<br />
-    or, for example, if you were to do it in Python instead of Java:
+    or, for example, if you were to do it in Python instead of Java: <br />
 Submissions<br />
 ├── PS1<br />
 │   └── EXAMPLE_NETID<br />
