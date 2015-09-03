@@ -1,5 +1,3 @@
-import numpy as np
-
 def construct_matrix(values):
     dimen = int(values.pop(0))
     data = values[0:dimen]
@@ -8,8 +6,7 @@ def construct_matrix(values):
         mat.append([int(i) for i in row.split()])
     for i in range(dimen):
         values.pop(0)
-    matrix = np.reshape(np.array(mat), [dimen, dimen])
-    return matrix, dimen
+    return mat, dimen
 
 with open('Diagonal.txt', 'r') as f:
     data = f.read().split('\n')
@@ -25,7 +22,7 @@ while nCases>0:
     diag1 = 0
     diag2 = 0
     for i in range(dimen):
-        diag1 += current_matrix[i, i]
-        diag2 += current_matrix[dimen-i-1, i]
+        diag1 += current_matrix[i][i]
+        diag2 += current_matrix[dimen-i-1][i]
     print(diag1*diag2)
     nCases-=1
