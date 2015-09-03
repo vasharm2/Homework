@@ -33,17 +33,45 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Diagonal {
 
+    public enum Direction{Main, Other}
+
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+        for (int[] ints : input) {
+            if (ints.length != input.length) throw new IllegalArgumentException("Not a square matrix!");
+        }
+        return diagonal(input, Direction.Main) * diagonal(input, Direction.Other);
 	}
 
-
-
-
+	public static int diagonal(int[][] input, Direction direction){
+        int size = input.length;
+        int r_init, r_offset, c_init, c_offset;
+        switch (direction) {
+            case Main:
+                r_init = 0;
+                c_init = 0;
+                r_offset = 1;
+                c_offset = 1;
+                break;
+            case Other:
+                r_init = 0;
+                c_init = size - 1;
+                r_offset = 1;
+                c_offset = -1;
+                break;
+            default:
+                throw new IllegalStateException();
+        }
+        int r = r_init, c = c_init, sum = 0;
+        while ((0 <= r && r < size) && (0 <= c && c < size)){
+            sum += input[r][c];
+            r += r_offset;
+            c += c_offset;
+        }
+        return sum;
+    }
 
 	public static void main(String[] args) {
-		File file = new File("Diagonal.txt");
+		File file = new File("src/Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
