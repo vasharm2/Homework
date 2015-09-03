@@ -1,5 +1,6 @@
-import java.util.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /*
 ************************************************
@@ -33,16 +34,14 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Diagonal {
 
-    public enum Direction{Main, Other}
-
-	public static int diagonal(int[][] input) {
+    public static int diagonal(int[][] input) {
         for (int[] ints : input) {
             if (ints.length != input.length) throw new IllegalArgumentException("Not a square matrix!");
         }
         return diagonal(input, Direction.Main) * diagonal(input, Direction.Other);
-	}
+    }
 
-	public static int diagonal(int[][] input, Direction direction){
+    public static int diagonal(int[][] input, Direction direction) {
         int size = input.length;
         int r_init, r_offset, c_init, c_offset;
         switch (direction) {
@@ -62,7 +61,7 @@ public class Diagonal {
                 throw new IllegalStateException();
         }
         int r = r_init, c = c_init, sum = 0;
-        while ((0 <= r && r < size) && (0 <= c && c < size)){
+        while ((0 <= r && r < size) && (0 <= c && c < size)) {
             sum += input[r][c];
             r += r_offset;
             c += c_offset;
@@ -70,26 +69,27 @@ public class Diagonal {
         return sum;
     }
 
-	public static void main(String[] args) {
-		File file = new File("Diagonal.txt");
-		try {
-			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
-				int N = scan.nextInt();
-				int[][] matrix = new int[N][N];
-				for(int j = 0; j < N; j++) {
-					for(int k = 0; k < N; k++) {
-						matrix[j][k] = scan.nextInt();
-					}
-				}
-				System.out.println(diagonal(matrix));
-			}
-			scan.close();
-		}
-		catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        File file = new File("src/Diagonal.txt");
+        try {
+            Scanner scan = new Scanner(file);
+            int numberOfCases = scan.nextInt();
+            for (int i = 0; i < numberOfCases; i++) {
+                int N = scan.nextInt();
+                int[][] matrix = new int[N][N];
+                for (int j = 0; j < N; j++) {
+                    for (int k = 0; k < N; k++) {
+                        matrix[j][k] = scan.nextInt();
+                    }
+                }
+                System.out.println(diagonal(matrix));
+            }
+            scan.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public enum Direction {Main, Other}
 
 }
