@@ -38,14 +38,35 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
+		char[] chars = input.toCharArray();
+		Arrays.sort(chars);
+		int[] occurrenceOfSingleChar = new int[]{0};
+		char currentChar = chars[0];
+		int length = 0;
+		for (char c : chars) {
+			if (c == currentChar){
+				length++;
+			} else {
+				checkLength(length, occurrenceOfSingleChar);
+				if (occurrenceOfSingleChar[0] > 1) return false;
+				currentChar = c;
+				length = 1;
+			}
+		}
+		checkLength(length, occurrenceOfSingleChar);
+		return occurrenceOfSingleChar[0] < 2;
 	}
 
-
+	private static void checkLength(int length, int[] occurrenceOfSingleChar){
+		if (length % 2 == 1){
+			occurrenceOfSingleChar[0]++;
+		} else if (length < 1){
+			throw new IllegalStateException();
+		}
+	}
 
 	public static void main(String[] args) {
-		File file = new File("Anagram.txt");
+		File file = new File("src/test.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
