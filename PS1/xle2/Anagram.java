@@ -49,9 +49,10 @@ public class Anagram {
 
 	public static boolean anagram(String input) {
 		int [] x = new int [MAX_CHAR];
-		for (int i = 0; i < input.length(); ++i) {
-			if (isNumber(input.charAt(i)) || isLetter(input.charAt(i)))
-				++x[input.charAt(i)];
+		String str = input.toLowerCase();
+		for (int i = 0; i < str.length(); ++i) {
+			if (isNumber(str.charAt(i)) || isLetter(str.charAt(i)))
+				++x[str.charAt(i)];
 		}
 		int oddCount = 0;
 		for (int i = 0; i < MAX_CHAR; ++i)
