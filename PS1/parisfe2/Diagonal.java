@@ -33,12 +33,53 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Diagonal {
 
-	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+	public static int diagonal(int[][] input, int N) 
+	{
+		int result = sumDiagonal(input, N, true) * sumDiagonal(input, N, false);
+
+		
+		
+		return result;
 	}
 
-
+	public static int sumDiagonal(int[][] input, int N, boolean down)
+	{
+		int result = 0;
+		
+		// Starting upper left
+		if(down)
+		{
+			for (int y = 0; y < N; y++)
+			{
+				for (int x = 0; x < N; x++)
+				{
+					if(x == y)
+					{
+						//System.out.println(input[y][x]);
+						result += input[y][x];
+					}
+				}
+			}
+		}
+		// Starting bottom left
+		else
+		{
+			for (int y = N-1; y >= 0; y--)
+			{
+				for (int x = 0; x < N; x++)
+				{
+					if (x == (N-1) - y)
+					{
+						//System.out.println(input[y][x]);
+						result += input[y][x];
+					}
+					
+				}
+			}
+		}
+		
+		return result;
+	}
 
 
 
@@ -55,7 +96,7 @@ public class Diagonal {
 						matrix[j][k] = scan.nextInt();
 					}
 				}
-				System.out.println(diagonal(matrix));
+				System.out.println(diagonal(matrix, N));
 			}
 			scan.close();
 		}
