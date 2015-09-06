@@ -34,6 +34,10 @@ public class Stairs {
 
 	public static void stairs(int input) {
 		for(int k = 1; k < input + 2; k++){
+				for(int k = 1; k < input + 2; k++){
+				for(int n = input + 1; n > k; n--) {
+					System.out.print(" ");
+				}
 				for(int m = 0; m < k; m++){
 					if(m == k - 1) {
 						System.out.println("#");
@@ -44,6 +48,7 @@ public class Stairs {
 				
 				}
 			}
+
 		return;
 	}
 
