@@ -26,7 +26,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
+For example, the String true will return true (rotator), while the String false will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -36,13 +36,54 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-
+	static ArrayList<Character> chars;
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
+		chars = new ArrayList<Character>();
+		char[] inputChars = input.toCharArray();
+		for(int i = 0; i < inputChars.length; i++) {
+			chars.add(inputChars[i]);
+		}
+		int inputLength = chars.size();
+		removeDupChars(chars);
+		if(inputLength%2==0) {
+			if(chars.size() == 0) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			if(chars.size() == 1) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
 	}
-
-
+	
+	/*public static void printArray(ArrayList<Character> a) {
+		for(int i = 0; i < a.size(); i++) {
+			System.out.print(a.get(i));
+		}
+		System.out.println("");
+	}*/
+	
+	public static void removeDupChars(ArrayList<Character> chars) {
+		for(int i = 0; i < chars.size() - 1; i++) {
+			char first = chars.get(i);
+			for(int j = chars.size() - 1; j > i; j--) {
+				char second = chars.get(j);
+				if(first == second) {
+					chars.remove(i);
+					chars.remove(j-1);
+					i--;
+					break;
+				}
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		File file = new File("Anagram.txt");

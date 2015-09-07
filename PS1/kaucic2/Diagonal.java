@@ -34,13 +34,15 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+		int sum1 = 0;
+		int sum2 = 0;
+		for(int i = 0; i < input.length; i++)
+		{
+			sum1 += input[i][i];
+			sum2 += input[input.length-i-1][i];
+		}
+		return sum1*sum2;
 	}
-
-
-
-
 
 	public static void main(String[] args) {
 		File file = new File("Diagonal.txt");
