@@ -26,7 +26,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
+For example, the String “oatrtro�? will return true (rotator), while the String “false�? will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -37,26 +37,45 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 public class Anagram {
 
-	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
-	}
+ public static boolean anagram(String input) {
+  int[] characters = new int[200];
+  String lowerInput = input.toLowerCase();
+  int modTotal = 0;
+  
+  for(int i = 0; i < characters.length; i++){
+    characters[i] = 0;
+  }
+  
+  for(int i = 0; i < input.length(); i++){
+    int index = Character.getNumericValue(lowerInput.charAt(i));
+    characters[index] += 1;
+  }
+  
+  for(int i = 0; i < characters.length; i++){
+    modTotal += characters[i] % 2;
+  }
+  
+  if (modTotal <= 1)
+    return true;
+  else
+    return false;
+ }
 
 
 
-	public static void main(String[] args) {
-		File file = new File("Anagram.txt");
-		try {
-			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
-				String input = scan.next();
-				System.out.println(anagram(input));
-			}
-			scan.close();
-		}
-		catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
+ public static void main(String[] args) {
+  File file = new File("Anagram.txt");
+  try {
+   Scanner scan = new Scanner(file);
+   int numberOfCases = scan.nextInt();
+   for(int i = 0; i < numberOfCases; i++) {
+    String input = scan.next();
+    System.out.println(anagram(input));
+   }
+   scan.close();
+  }
+  catch (FileNotFoundException e) {
+   e.printStackTrace();
+  }
+ }
 }

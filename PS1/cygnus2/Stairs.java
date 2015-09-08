@@ -32,25 +32,38 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Stairs {
 
 
-	public static void stairs(int input) {
-		//YOUR CODE HERE
-		return;
-	}
+ public static void stairs(int input) {
+   int frontSpaces = input;
+  for(int i = 0; i <= input; i++) 
+  {
+    if (frontSpaces > 0)
+      for(int j = 0; j < frontSpaces; j++){
+      System.out.print(" ");
+    }
+    for (int x = 0; x <= (input - frontSpaces); x++){
+      System.out.print("#");
+    }
+    System.out.println();
+    frontSpaces--;
+  }
+  
+  return;
+ }
 
 
-	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
-		try {
-			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
-				int height = scan.nextInt();
-				stairs(height);
-			}
-		}
-		catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
+ public static void main(String[] args) {
+  File file = new File("Stairs.txt");
+  try {
+   Scanner scan = new Scanner(file);
+   int numberOfCases = scan.nextInt();
+   for(int i = 0; i < numberOfCases; i++) {
+    int height = scan.nextInt();
+    stairs(height);
+   }
+  }
+  catch (FileNotFoundException e) {
+   e.printStackTrace();
+  }
+ }
 
 }
