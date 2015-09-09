@@ -55,9 +55,7 @@ public class Anagram {
     modTotal += characters[i] % 2;
   }
   
-  if (modTotal == 0)
-    return true;
-  else if (modTotal == 1 && input.length() % 2 == 1)
+  if (modTotal <= 1)
     return true;
   else
     return false;
