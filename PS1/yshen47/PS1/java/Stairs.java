@@ -34,6 +34,21 @@ public class Stairs {
 
 	public static void stairs(int input) {
 		//YOUR CODE HERE
+		for(int i=1;i<=input;i++)
+		{
+			for(int j=input;j>0;j--){
+				if(i<j)
+				{
+					System.out.print(" ");
+				}
+				else
+				{
+					System.out.print("#");
+				}
+			}
+			System.out.println("");
+			
+		}
 		return;
 	}
 

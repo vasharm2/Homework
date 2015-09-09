@@ -39,7 +39,38 @@ public class Anagram {
 
 	public static boolean anagram(String input) {
 		//YOUR CODE HERE
-		return false;
+		int count1=1;
+		int count2=0;
+		do{
+			String temp="";
+		    char target=input.charAt(0);
+		    for(int i=1;i<input.length();i++)
+		     {
+		        if(target==(input.charAt(i)))
+		        {
+		        	count1++;
+		        }
+		        else
+		        {
+
+		        	temp+=input.charAt(i);
+		        }
+		     }
+		    if(count1%2==1)
+		    {
+		    	count2++;
+		    }
+		    if(count2>1){
+		    	return false;
+		    }
+		    count1=1;
+		    input=temp;
+		    
+		    }while(input.length()>0);
+	        	    
+		    
+		return true;
+
 	}
 
 
