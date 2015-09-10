@@ -1,5 +1,8 @@
-4
+7
 aabb
 abba
 xyyxy
 axsx
+AAAA
+AaAa
+F-F--
