@@ -35,7 +35,7 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 def anagram (word):
     dictionary = {}
     count = 0
-    print word
+    # print word
     for letter in word:
         if letter in dictionary:
             dictionary[letter] = (dictionary[letter] + 1) % 2

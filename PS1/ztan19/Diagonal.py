@@ -36,7 +36,7 @@ def diagonal(input):
     sumFrom_topLeft_to_bottomRight = 0
     sumFrom_topRight_to_bottomLeft = 0
     for list in input:
-        print list
+        # print list
         numFrom_topLeft_to_bottomRight = 0
         numFrom_topRight_to_bottomLeft = 0
         numFrom_topLeft_to_bottomRight += int(list[index])
