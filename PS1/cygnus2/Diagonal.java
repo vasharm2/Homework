@@ -40,7 +40,8 @@ public class Diagonal {
    diagonal1 += input[i][i];
    diagonal2 += input[i][input.length-1-i];
    
-   //System.out.println(input[1][1]); //Debug code
+   //System.out.println(input[i][i]); //Debug code by printing first diagonal numbers
+   //System.out.println(input[i][input.length-1-i]); //Debug code by printing second diagonal numbers
    //System.out.println(diagonal1 + " and " + diagonal2); //Debug code, verrified.
    i++;
     }
