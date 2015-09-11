@@ -36,38 +36,27 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-    public static boolean anagram(String input) {
-        int[] letters = new int[26];
-        for (char c : input.toCharArray()) {
-            letters[c - 'a']++;
-        }
 
-        boolean seenOdd = false;
-        for (int c : letters) {
-            if (c % 2 == 1) {
-                if (seenOdd) {
-                    return false;
-                } else {
-                    seenOdd = true;
-                }
-            }
-        }
-        return true;
-    }
+	public static boolean anagram(String input) {
+		//YOUR CODE HERE
+		return false;
+	}
 
-    public static void main(String[] args) {
-        File file = new File("Anagram.txt");
-        try {
-            Scanner scan = new Scanner(file);
-            int numberOfCases = scan.nextInt();
-            for(int i = 0; i < numberOfCases; i++) {
-                String input = scan.next();
-                System.out.println(anagram(input));
-            }
-            scan.close();
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+
+
+	public static void main(String[] args) {
+		File file = new File("Anagram.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				String input = scan.next();
+				System.out.println(anagram(input));
+			}
+			scan.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 }

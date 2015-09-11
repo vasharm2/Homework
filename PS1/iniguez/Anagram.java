@@ -36,38 +36,44 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-    public static boolean anagram(String input) {
-        int[] letters = new int[26];
-        for (char c : input.toCharArray()) {
-            letters[c - 'a']++;
-        }
 
-        boolean seenOdd = false;
-        for (int c : letters) {
-            if (c % 2 == 1) {
-                if (seenOdd) {
-                    return false;
-                } else {
-                    seenOdd = true;
-                }
-            }
-        }
-        return true;
-    }
+	public static boolean anagram(String input) {
+		int[] alph = new int[26];
+		int oddCount = 0;
+		for(int count = 0; count < alph.length;count++)
+		{
+			alph[count] = 0;
+		}
+		for(int count = 0; count < input.length(); count++)
+		{
+			alph[((int)input.toUpperCase().charAt(count)) - 65]++;
+		}
+		for(int elem: alph)
+		{
+			if(elem%2==1) oddCount++;
+		}
+		if(input.length()%2==0 && oddCount==0 || input.length()%2==1 && oddCount==1) 
+		{
+			return true;
+		}
+		return false;
+	}
 
-    public static void main(String[] args) {
-        File file = new File("Anagram.txt");
-        try {
-            Scanner scan = new Scanner(file);
-            int numberOfCases = scan.nextInt();
-            for(int i = 0; i < numberOfCases; i++) {
-                String input = scan.next();
-                System.out.println(anagram(input));
-            }
-            scan.close();
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+
+
+	public static void main(String[] args) {
+		File file = new File("Anagram.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				String input = scan.next();
+				System.out.println(anagram(input));
+			}
+			scan.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 }

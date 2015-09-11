@@ -36,38 +36,49 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-    public static boolean anagram(String input) {
-        int[] letters = new int[26];
-        for (char c : input.toCharArray()) {
-            letters[c - 'a']++;
-        }
 
-        boolean seenOdd = false;
-        for (int c : letters) {
-            if (c % 2 == 1) {
-                if (seenOdd) {
-                    return false;
-                } else {
-                    seenOdd = true;
-                }
-            }
-        }
-        return true;
-    }
+	public static boolean anagram(String input) {
+		// add up the count of each character occurence
+		int[] chars = new int[Character.MAX_VALUE];
+		for(char c : input.toCharArray()) {
+			chars[c]++;
+		}
+		// tally up the counts (there can only be one odd count)
+		boolean alreadyFoundOdd = false;
+		for(int i : chars)  {
+			if(i % 2 != 0)
+				if(alreadyFoundOdd)
+					return false;
+				else
+					alreadyFoundOdd = true;
+		}
+		return true;
+	}
 
-    public static void main(String[] args) {
-        File file = new File("Anagram.txt");
-        try {
-            Scanner scan = new Scanner(file);
-            int numberOfCases = scan.nextInt();
-            for(int i = 0; i < numberOfCases; i++) {
-                String input = scan.next();
-                System.out.println(anagram(input));
-            }
-            scan.close();
-        }
-        catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
+	/*  Unnessecary.  F
+	public static boolean isPalindrome(String input)  {
+		for(int i = 0; i < input.length() / 2; i++)
+			if(input.charAt(i) != input.charAt(input.length()-1-i))
+				return false;
+		return true;
+	}
+	*/
+
+
+
+	public static void main(String[] args) {
+		File file = new File("Anagram.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				String input = scan.next();
+				System.out.println(anagram(input));
+			}
+			scan.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 }

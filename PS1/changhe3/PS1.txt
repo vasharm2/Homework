@@ -1,0 +1,140 @@
+PROBLEM SET 1
+Welcome to CS 196, in addition to your semester project we would also like to
+help you guys prepare traditional software engineering jobs. As such these
+homeworks will consist of classic interview problems, advanced programming
+problems and challenges in debugging and other traditional tasks.
+
+
+Problem 1 - Anagrams
+
+A common problem in computer science is finding patterns within data.
+This problem will simulate that in a way that is easy to see what is happening.
+
+A palindrome is a word, phrase, number, or other sequence of characters which
+reads the same backward or forward. Allowances may be made for adjustments to
+capital letters, punctuation, and word dividers.
+
+An anagram is a word, phrase, or name formed by rearranging the letters of another.
+
+Given a String S, determine if it is an anagram of a palindrome. Return true if
+the String is an anagram of a palindrome, and false otherwise. For example, the
+String “oatrtro” will return true (rotator), while the String “false” will
+return false.
+
+Input format - via txt file:
+The first line will contain a integer, the number of test cases
+The following lines will be strings to be evaluated
+
+Output format:
+Print true or false to console (STDOUT)
+Line separated please
+
+Ex.
+4
+aabb
+abba
+xyyxy
+axsx
+
+true
+true
+true
+false
+
+
+Code is provided in Java to run STIN from a text file
+Feel free to rewrite this in any language
+
+
+Problem 2 - Diagonal Matrix
+
+Given a square matrix size N x N, calculate the product of the sums across the
+two main diagonals. For example, given the matrix:
+
+Input format - via txt file:
+Then first line contains an integer X which is the number of test cases
+
+Each test case contains an integer N which is the dimensions of the square matrix
+This will be followed by the contents of the matrix being read left to right
+
+Ex.
+3
+
+4	5	7
+3	1	5
+9	3	2
+
+Output Format - console
+Print the product of the sums of the diagonals ((4 + 1 + 2) (9 + 1 + 7))
+Line separated please
+119
+
+Code is provided in Java to run STIN from a text file
+Feel free to rewrite this in any language
+
+Problem 3 - Stairs
+Given an integer input N, print a staircase out of height N. For example, given
+the input 5, print out the following staircase:
+
+    #
+   ##
+  ###
+ ####
+#####
+
+Input format - from text file:
+The first line contains an integer with the number of test cases.
+The following lines are the heights of the stairs
+
+Ex.
+2
+4
+4
+
+Output format - console
+Print to console space separated stairs
+    #
+   ##
+
+    #
+   ##
+  ###
+ ####
+
+    #
+   ##
+  ###
+ ####
+
+
+
+
+************************************************
+WRITE YOUR OWN TEST CASES!!!!
+
+
+We deliberately gave an incomplete set of test cases, please add more to thoroughly test your code.
+
+
+How to add test cases:
+
+
+Problem 1 -
+The first integer in the text file is the number of test case inputs. Every string after that is an input string
+Increment the test case counter when adding in additional test cases.
+
+Problem 2 -
+The first integer in the text file is the number of test case inputs. After that, each test case consists of the dimension of the matrix,
+followed by the actual matrix.
+
+When adding in additional test cases, increment the test case counter at the top, then append the dimension, and then the matrix
+itself.
+
+Problem 3 - 
+The first integer in the text file is the number of test case inputs. After that are the test cases themselves, namely the heights of the stairs
+to print. When adding test cases, increment the test cast input counter, and append heights of stairs test cases to the file.
+
+************************************************
+
+
+
