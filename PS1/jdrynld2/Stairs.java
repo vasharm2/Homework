@@ -31,7 +31,10 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Stairs {
 
-
+	/**
+	 * Creates a text-based staircase of N stair-levels
+	 * @param input The number of stair levels desired.
+	 */
 	public static void stairs(int input) {
 		//The number of blocks on the current stair level
 		int x = 1;

@@ -37,6 +37,11 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 public class Anagram {
 
+	/**
+	 * A function that will determine whether or not a given string is an anagram of a palindrome
+	 * @param input - The string to be tested for anagram-palindromeness
+	 * @return - True if the string is an anagram of a palindrome. False if not
+	 */
 	public static boolean anagram(String input) {
 		//HashMap to carry the count of each character in the input String
 		HashMap<Character, Integer> characterCount = new HashMap<Character, Integer>();
