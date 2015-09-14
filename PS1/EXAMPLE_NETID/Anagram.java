@@ -38,8 +38,38 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
+		ArrayList<String> word = new ArrayList<String>();
+		boolean truth = true;
+		boolean lie = false;
+		int k = 0;
+		for(int i = 0; i < input.length(); i++) {
+			word.add(input.substring(i,i+1));
+		}
+		while(word.size() > 1) {
+			for(int j = 1; j < word.size(); j++) {
+				String current = word.get(0);
+				System.out.println(j);
+				if(word.size() > 1) {
+					if(current.equals(word.get(j))) {
+						System.out.println(j);
+						System.out.println(word.get(0));
+						System.out.println(word.get(j));
+						word.remove(0);
+						word.remove(j-1);
+						truth = true;
+					}
+					else if(j > 0){
+						/*System.out.println("potato");*/
+						if (j == word.size() - 1) {
+							return false;
+						}
+							
+					}
+				}
+			}
+		}
+		
+		return truth;
 	}
 
 
