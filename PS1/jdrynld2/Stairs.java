@@ -17,11 +17,10 @@ Question 3
 
 Given an integer input N, print a staircase out of height N. For example, given the input 4, print out the following staircase:
 
-    #
-   ##
-  ###
- ####
-#####
+   #
+  ##
+ ###
+####
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!

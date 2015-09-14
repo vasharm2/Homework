@@ -34,7 +34,7 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	/**
-	 * 
+	 * Produces the product of the sums of the diagonals of a matrix.
 	 * @param input - An N x N matrix 
 	 * @return - The product of the sums of the diagonals of the matrix given.
 	 */
