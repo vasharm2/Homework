@@ -34,8 +34,18 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+		int number = input.length;
+		int diag1 = 0;
+		int diag2 = 0;
+		for(int i = 0; i < number; i++) {
+			diag1 = diag1 + input[i][i];
+		}
+		for(int j = 0; j < number; j++) {
+			diag2 = diag2 + input[number - 1 - j][j];
+		}
+		int diagonals = 1;
+		diagonals = diag1 * diag2;
+		return diagonals;
 	}
 
 
