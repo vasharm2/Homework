@@ -18,8 +18,8 @@ int main(int argc, char** argv){
 }
 
 int draw(int levels){
-    for (int i=0; i<levels; i++){
-        for (int j=0; j<levels-i-1; j++){
+    for (int i=0; i<levels+1; i++){
+        for (int j=0; j<levels-i; j++){
             std::cout<<" ";
         }
         for (int k=0; k<=i; k++){
