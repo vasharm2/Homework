@@ -48,7 +48,8 @@ public class Anagram {
         }
         
         for(int i = 0; i<inputLength; i++){
-            letters[i] = input.charAt(i);
+            char upperChar = Character.toUpperCase(input.charAt(i));
+            letters[i] = upperChar;
         }
         
         //sort the array into alphabetical order
@@ -94,6 +95,5 @@ public class Anagram {
         catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        
     }
 }
