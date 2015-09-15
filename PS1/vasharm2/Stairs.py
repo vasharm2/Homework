@@ -8,7 +8,7 @@
 
 
 Problem set 1
-
+ 
 
 Question 3
 
@@ -28,7 +28,9 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 def stairs(input):
     # YOUR CODE HERE
-    pass;
+    for i in range(input):
+        s=' '*(input-1-i)+'#'*(i+1)
+        print(s)
 
 try:
     with open('Stairs.txt', 'r') as f:

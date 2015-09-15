@@ -30,6 +30,7 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 def diagonal(input):
     # YOUR CODE HERE
+    
     return 0
 
 try:
