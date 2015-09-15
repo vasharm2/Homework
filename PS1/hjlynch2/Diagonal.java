@@ -57,7 +57,6 @@ public class Diagonal {
 		
 		return (diagonal1*diagonal2);
 	}
-}
 
 	public static void main(String[] args) {
 		File file = new File("Diagonal.txt");

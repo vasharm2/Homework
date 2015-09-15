@@ -92,16 +92,19 @@ public static boolean anagram(String input) {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(anagram("ax-sx"));
-		System.out.println("test");
-		
-		/*
-		 * 4
-		 * aabb
-		 * abba
-		 * xyyxy
-		 * axsx
-		 */
+		File file = new File("Anagram.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				String input = scan.next();
+				System.out.println(anagram(input));
+			}
+			scan.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
