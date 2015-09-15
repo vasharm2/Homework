@@ -36,31 +36,32 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-
-	public static boolean anagram(String inputs) {
-		char[] input = inputs.toCharArray();
-		int allowedSingles = input.length%2;
-		for(int i=0;i<input.length;i++) {
-			if (input[i] == '*') {
-				//break;
-			}
-			//find the next instance
-			for(int j=i+1; j<input.length; j++) {
-				if(input[i] == input[j]) {
-					input[i]='*';
-					input[j]='*';					
+	
+	public static boolean anagram(String input) {
+		int numberOfMatchingCharacters = 0;
+		StringBuilder inString = new StringBuilder(input);
+		
+		for(int i=0; i<inString.length();i++){
+			if(inString.charAt(i) != '*'){
+				for(int j=(i+1); j<inString.length();j++){
+					if(inString.charAt(j) != '*' && (inString.charAt(i) == inString.charAt(j))){
+						inString.setCharAt(i, '*');
+						inString.setCharAt(j, '*');
+						numberOfMatchingCharacters++;
+					}
 				}
 			}
-			
 		}
-		for(char c:input) {
-			if(c != '*') {
-				allowedSingles=allowedSingles-1;
-			}
+	
+		if(inString.length()%2 == 0){
+			if(numberOfMatchingCharacters == inString.length()/2)
+				return true;
+		} else {
+			if(numberOfMatchingCharacters == (inString.length()-1)/2)
+				return true;
 		}
-		System.out.print(input);
-		return allowedSingles>=0;
-}
+		return false;
+	}
 
 
 

@@ -37,38 +37,43 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 public class Anagram {
 
-	public static boolean anagram(String inputs) {
-		char[] input = inputs.toCharArray();
-		int allowedSingles = input.length%2;
-		for(int i=0;i<input.length;i++) {
-			if (input[i] == '*') {
-				//break;
-			}
-			//find the next instance
-			for(int j=i+1; j<input.length; j++) {
-				if(input[i] == input[j]) {
-					input[i]='*';
-					input[j]='*';					
+	public static boolean anagram(String input) 
+	{
+		input.toLowerCase();
+		int length=input.length();
+		int[] occ=new int[26];
+		for(int i = 0;i<length;i++){
+			char let=input.charAt(i);
+			occ[let - 'a']++;
+		}
+		//even
+		if (length%2==0)
+		{
+			for(int k = 0;k<occ.length;k++)
+				if(occ[k]%2==1)
+					 return false;
+			return true;
+		}
+		else
+		{
+			//odd
+			int count=0;
+			for(int j = 0;j<occ.length;j++)
+				{
+					if(occ[j]%2==1)
+					{
+						count++;
+						if(count==2){return false;}
+					}
 				}
-			}
-			
+			return true;
 		}
-		for(char c:input) {
-			if(c != '*') {
-				allowedSingles=allowedSingles-1;
-			}
-		}
-		System.out.print(input);
-		return allowedSingles>=0;
-}
-
-
-
+	}
 	public static void main(String[] args) {
 		File file = new File("Anagram.txt");
 		try {
 			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
+			int numberOfCases = scan.nextIn	t();
 			for(int i = 0; i < numberOfCases; i++) {
 				String input = scan.next();
 				System.out.println(anagram(input));

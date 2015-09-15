@@ -37,30 +37,40 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 public class Anagram {
 
-	public static boolean anagram(String inputs) {
-		char[] input = inputs.toCharArray();
-		int allowedSingles = input.length%2;
-		for(int i=0;i<input.length;i++) {
-			if (input[i] == '*') {
-				//break;
-			}
-			//find the next instance
-			for(int j=i+1; j<input.length; j++) {
-				if(input[i] == input[j]) {
-					input[i]='*';
-					input[j]='*';					
+	public static boolean anagram(String input) {
+		if(input.length() % 2 == 0) { 
+			while(input.length() > 0) { 
+				int count = 0 ;
+				for(int i = 0 ; i < input.length() ; i++) {
+					if(input.charAt(i) == input.charAt(0)) {
+						count++ ;
+					}
 				}
-			}
-			
-		}
-		for(char c:input) {
-			if(c != '*') {
-				allowedSingles=allowedSingles-1;
+				if(count % 2 != 0) {
+					return false ;
+				}
+				input = input.replaceAll(input.substring(0, 1), "") ;
 			}
 		}
-		System.out.print(input);
-		return allowedSingles>=0;
-}
+		if(input.length() % 2 == 1) {
+			while(input.length() > 0) {
+				int count = 0 ;
+				boolean midLeft = true ;
+				for(int i = 0 ; i < input.length() ; i++) {
+					if(input.charAt(i) == input.charAt(0)) {
+						count++ ;
+					}
+				}
+				if(count % 2 != 0) {
+					if(midLeft) {
+						midLeft = false ;
+					}else return false ;
+				}
+				input = input.replaceAll(input.substring(0, 1), "") ;
+			}
+		}
+		return true;
+	}
 
 
 

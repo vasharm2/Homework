@@ -26,7 +26,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String â€œoatrtroâ€ will return true (rotator), while the String â€œfalseâ€ will return false.
+For example, the String ¡°oatrtro¡± will return true (rotator), while the String ¡°false¡± will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -36,31 +36,30 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
+	
+	public static final int MAX_CHAR = 256;
+	
+	public static boolean isNumber(char c) {
+		return c >= '0' && c <= '9';
+	}
+	
+	public static boolean isLetter(char c) {
+		return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+	}
 
-	public static boolean anagram(String inputs) {
-		char[] input = inputs.toCharArray();
-		int allowedSingles = input.length%2;
-		for(int i=0;i<input.length;i++) {
-			if (input[i] == '*') {
-				//break;
-			}
-			//find the next instance
-			for(int j=i+1; j<input.length; j++) {
-				if(input[i] == input[j]) {
-					input[i]='*';
-					input[j]='*';					
-				}
-			}
-			
+	public static boolean anagram(String input) {
+		int [] x = new int [MAX_CHAR];
+		String str = input.toLowerCase();
+		for (int i = 0; i < str.length(); ++i) {
+			if (isNumber(str.charAt(i)) || isLetter(str.charAt(i)))
+				++x[str.charAt(i)];
 		}
-		for(char c:input) {
-			if(c != '*') {
-				allowedSingles=allowedSingles-1;
-			}
-		}
-		System.out.print(input);
-		return allowedSingles>=0;
-}
+		int oddCount = 0;
+		for (int i = 0; i < MAX_CHAR; ++i)
+			if (x[i] % 2 == 1)
+				++oddCount;
+		return oddCount <= 1;
+	}
 
 
 

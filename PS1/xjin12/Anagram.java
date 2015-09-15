@@ -36,31 +36,32 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
+   
+    /* It pairs up characters that have same value, and counts the number of characters that are alone.
+     If there are more than 1 unpaired characters, the original string is not an anagram of a palindrome.
+     Otherwise, it is an ananagram of a palindrome.
+	    */
 
-	public static boolean anagram(String inputs) {
-		char[] input = inputs.toCharArray();
-		int allowedSingles = input.length%2;
-		for(int i=0;i<input.length;i++) {
-			if (input[i] == '*') {
-				//break;
-			}
-			//find the next instance
-			for(int j=i+1; j<input.length; j++) {
-				if(input[i] == input[j]) {
-					input[i]='*';
-					input[j]='*';					
-				}
-			}
-			
+	public static boolean anagram(String input) {
+		 int n = 0; int pos; char ch;
+		while (input.length() > 0){ 
+			    ch = input.charAt(0);
+			    input = input.substring(1); 			//delete 0th character.
+			    pos = input.indexOf(ch); 				//get the position of the character that is same as ch.
+			if(pos != -1){
+				 input = input.substring(0,pos)+input.substring(pos+1);	//if there is such a character,delete it.
+			} else{
+				n++;	  //n is the number of unpaired characters.
+			}															
 		}
-		for(char c:input) {
-			if(c != '*') {
-				allowedSingles=allowedSingles-1;
-			}
+		if(n > 1) {
+			return false;
+		} else {
+			return true;
 		}
-		System.out.print(input);
-		return allowedSingles>=0;
-}
+	}   
+
+		
 
 
 

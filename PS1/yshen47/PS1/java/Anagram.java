@@ -37,30 +37,41 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 public class Anagram {
 
-	public static boolean anagram(String inputs) {
-		char[] input = inputs.toCharArray();
-		int allowedSingles = input.length%2;
-		for(int i=0;i<input.length;i++) {
-			if (input[i] == '*') {
-				//break;
-			}
-			//find the next instance
-			for(int j=i+1; j<input.length; j++) {
-				if(input[i] == input[j]) {
-					input[i]='*';
-					input[j]='*';					
-				}
-			}
-			
-		}
-		for(char c:input) {
-			if(c != '*') {
-				allowedSingles=allowedSingles-1;
-			}
-		}
-		System.out.print(input);
-		return allowedSingles>=0;
-}
+	public static boolean anagram(String input) {
+		//YOUR CODE HERE
+		int count1=1;
+		int count2=0;
+		do{
+			String temp="";
+		    char target=input.charAt(0);
+		    for(int i=1;i<input.length();i++)
+		     {
+		        if(target==(input.charAt(i)))
+		        {
+		        	count1++;
+		        }
+		        else
+		        {
+
+		        	temp+=input.charAt(i);
+		        }
+		     }
+		    if(count1%2==1)
+		    {
+		    	count2++;
+		    }
+		    if(count2>1){
+		    	return false;
+		    }
+		    count1=1;
+		    input=temp;
+		    
+		    }while(input.length()>0);
+	        	    
+		    
+		return true;
+
+	}
 
 
 
