@@ -50,6 +50,7 @@ public class Stairs {
 			//	hence the use of a for loop to print multiple lines.
 			System.out.println();
 		}
+		System.out.println();
 		return;
 	}
 
