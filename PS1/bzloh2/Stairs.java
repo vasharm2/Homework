@@ -33,21 +33,23 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-        int number = input++;
+        int number = input+1;
         int y=0;
+        int inputs = input;
         int x =0;
-        for(x = 0; x< number; x++)
+        for(x = 0; x<=input; x++)
         {
-            for( y = 1;y<=input;y++)
+            for( y = 0;y<inputs;y++)
             {
                 System.out.print(" ");
             }
-            for(y;y<=number;y++)
+          
+            for(int q = y;q<number;q++)
             {
                 System.out.print("#");
             }
             System.out.println("");
-            
+            inputs--;
         }
 		return;
 	}

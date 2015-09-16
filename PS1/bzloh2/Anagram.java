@@ -40,9 +40,9 @@ public class Anagram {
 	public static boolean anagram(String input) {
         int middle = 0;
         int count = 0;
-        int holder = 0;
+        
         char temp;
-        Arraylist <characters> bob = new Arraylist<characters>();
+        ArrayList <Character> bob = new ArrayList<Character>();
         for(int x =0; x<input.length();x++)
             bob.add(input.charAt(x));
         while(bob.size()!=0)
@@ -69,7 +69,7 @@ public class Anagram {
             
         }
             
-	}
+
 
 
 

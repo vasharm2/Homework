@@ -49,7 +49,7 @@ public class Diagonal {
         while((0<=end2 && end2<input.length) && (0<=end1 && end1<input[0].length))
         {
             right += input[end2][end1];
-            end2--;
+            end2++;
             end1--;
         }
         return right*left;
