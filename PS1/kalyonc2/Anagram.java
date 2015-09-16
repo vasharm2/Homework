@@ -1,4 +1,4 @@
-import java.util.*;
+﻿import java.util.*;
 import java.io.*;
 
 /*
@@ -26,7 +26,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
+For example, the String â€œoatrtroâ€� will return true (rotator), while the String â€œfalseâ€� will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -36,10 +36,43 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-
+	
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
+		int inputLength;
+		int count = 0;
+		int count2 = 0;
+		int numberOfFails = 0;
+		inputLength = input.length();
+		char[] character;
+		character = new char[inputLength];
+		while(count<inputLength){
+			character[count]=input.charAt(count);
+			count++;
+		}
+		count=0;
+		while(count<inputLength){
+			count2=count+1;
+			while (count2<inputLength){
+				if (character[count]==character[count2]){
+					character[count]='\u0000';
+					character[count2]='\u0000';
+				}
+				count2++;
+			}
+			count++;
+		}
+		count=0;
+		while(count<inputLength){
+			if (character[count]!='\u0000'){
+				numberOfFails++;
+			}
+			count++;
+		}
+		if (numberOfFails>1)
+			return false;
+		else
+			return true;
+		
 	}
 
 

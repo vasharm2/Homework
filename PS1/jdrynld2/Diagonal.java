@@ -33,9 +33,25 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Diagonal {
 
+	/**
+	 * Produces the product of the sums of the diagonals of a matrix.
+	 * @param input - An N x N matrix 
+	 * @return - The product of the sums of the diagonals of the matrix given.
+	 */
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+		int topToBottomDiagonalSum = 0;
+		//Sum the diagonal entries that go from the top to the bottom of the matrix
+		for(int i = 0; i < input.length; i++){
+			topToBottomDiagonalSum += input[i][i];
+		}
+
+		int bottomToTopDiagonalSum = 0;
+		//Sum the diagonal entries that go from the bottom to the top of the matrix
+		for(int i = 0; i < input.length; i++){
+			bottomToTopDiagonalSum += input[i][(input.length-1)-i];
+		}
+		//return the product of the two diagonal sums
+		return topToBottomDiagonalSum*bottomToTopDiagonalSum;
 	}
 
 
