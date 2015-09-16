@@ -34,16 +34,22 @@ public class Stairs {
     public static String buffer = new String();
 
 	public static void stairs(int input) {
-		for(int i = 1; i < input; i++){
-        String whitespace = new String(" " * i );
-        System.out.print(whitespace);
+		for(int i = 1; i <= input; i++){
+
+        for (int g = 0; g <= input - i; g++){
+            System.out.print(" ");
+        }
+        for (int h = 1; h <= i; h++){
+            System.out.print("#");
+        }
+        System.out.println();
     }
 		return;
 	}
 
 
 	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
+		/*File file = new File("Stairs.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
@@ -55,6 +61,8 @@ public class Stairs {
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+    */
+    stairs(4);
 	}
 
 }
