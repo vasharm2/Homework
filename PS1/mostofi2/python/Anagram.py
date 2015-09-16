@@ -30,9 +30,27 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 '''
 
+def instances(c, word):
+	count = 0
+	for s in word:
+		if (s == c):
+			count += 1
+	return count
+
 def anagram(word):
-    # YOUR CODE HERE
-    return False
+    ret = False;
+    if (len(word)%2 == 0):
+    	for c in word:
+    		if (instances(c, word)%2!=0):
+    			return False
+    else:
+    	for c in word:
+    		if (instances(c, word)%2==1 and instances(c, word)>=3):
+    			for d in word:
+    				if(instances(d, word)%2==1 and d != c):
+    					return False
+    			return True
+    return True
 
 try:
     with open('Anagram.txt', 'r') as f:
