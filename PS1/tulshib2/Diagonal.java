@@ -33,9 +33,18 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Diagonal {
 
-	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+	public static int diagonal(int[][] input) throws IOException {
+		if(input.length != input[0].length)
+			throw new IOException("Matrix is not square!");
+		int out = 0, sum1 = 0, sum2 = 0;
+		for(int i = 0; i < input.length; i++){
+			sum1 += input[i][i];
+			sum2 += input[input.length - i - 1][i];
+		}
+		///DEBUG PRINT
+		//System.out.println(sum1 + "\n"+ sum2);
+		out = sum1 * sum2;
+		return out;
 	}
 
 
@@ -55,7 +64,11 @@ public class Diagonal {
 						matrix[j][k] = scan.nextInt();
 					}
 				}
-				System.out.println(diagonal(matrix));
+				try{
+					System.out.println(diagonal(matrix));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 			scan.close();
 		}

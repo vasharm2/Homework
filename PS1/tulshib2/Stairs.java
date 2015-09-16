@@ -31,9 +31,19 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Stairs {
 
-
+	//Uses nested loops to iterate over each line to print the appropriate number of spaces and #s to form a staircase.
 	public static void stairs(int input) {
-		//YOUR CODE HERE
+		for(int i = input; i >= 0; i --)
+		{
+			int j = 0;
+			for(j = 0; j <= i; j++) 
+			{
+				System.out.print(" ");
+			}
+			for(j = i; j <= input; j++)
+				System.out.print("#");
+			System.out.println();
+		}
 		return;
 	}
 
