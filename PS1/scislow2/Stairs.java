@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 /*
 ************************************************
@@ -31,26 +30,32 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Stairs {
 
-
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+			System.out.println("Input stair height: ");
+			int height = scan.nextInt();
+			stairs(height);
+		scan.close();
+	}
+	
 	public static void stairs(int input) {
 		//YOUR CODE HERE
-		return;
-	}
-
-
-	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
-		try {
-			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
-				int height = scan.nextInt();
-				stairs(height);
+		int row = 1;
+		int length = input;
+		while(input>0) {
+			for(int j = length-row; j>0; j--) {
+				System.out.print(" ");
 			}
-		}
-		catch (FileNotFoundException e) {
-			e.printStackTrace();
+			for(int i = row; i > 0; i--) {
+				System.out.print("#");
+			}
+			row++;
+			input--;
+			System.out.println();
 		}
 	}
+	
+	
 
 }
