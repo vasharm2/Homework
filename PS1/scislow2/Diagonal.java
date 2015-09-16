@@ -32,8 +32,31 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 */
 public class Diagonal {
-
-    public static void main(String[] args) {
+	
+	public static void main(String[] args) {
+		File file = new File("Diagonal.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				int N = scan.nextInt();
+				int[][] matrix = new int[N][N];
+				for(int j = 0; j < N; j++) {
+					for(int k = 0; k < N; k++) {
+						matrix[j][k] = scan.nextInt();
+					}
+				}
+				System.out.println(diagonals(matrix));
+			}
+			scan.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//My code that I used for testing and running diagonals since text file was not working
+    /*public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int t = s.nextInt();
         int[][] mat = new int[t][t];
@@ -44,7 +67,7 @@ public class Diagonal {
         }
         System.out.println("\n" + diagonals(mat, t));
         s.close();
-    }
+    }*/
     
     public static int diagonals(int[][] mat, int rowcol){
         int sum1 = 0;

@@ -31,6 +31,22 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Stairs {
 
 	public static void main(String[] args) {
+		File file = new File("Stairs.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				int height = scan.nextInt();
+				stairs(height);
+			}
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//MY code for testing and running Stairs because text file wasn't working
+	/*public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int t = scan.nextInt();
 		ArrayList<Integer> h = new ArrayList<Integer>();
@@ -41,10 +57,9 @@ public class Stairs {
 			stairs(h.get(i));
 		}
 		scan.close();
-	}
+	}*/
 	
 	public static void stairs(int input) {
-		//YOUR CODE HERE
 		int row = 1;
 		int length = input;
 		while(input>0) {
