@@ -27,8 +27,11 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 '''
 
 def stairs(input):
-    # YOUR CODE HERE
-    pass;
+  print input
+  for i in range(1,int(input)+1):
+    print " "*(int(input)-i) + "#"*(i)
+  pass;
+  print
 
 try:
     with open('Stairs.txt', 'r') as f:
