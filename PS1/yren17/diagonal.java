@@ -1,5 +1,5 @@
 
-public class cs19 {
+public class diagonal {
 	public static void main(String[] args){
 		System.out.println("Please enter the size of your matrix:");
 		int size=TextIO.getlnInt();
