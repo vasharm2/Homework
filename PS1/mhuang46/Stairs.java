@@ -12,43 +12,46 @@ import java.io.*;
 
 Problem set 1
 
-
 Question 3
 
-Given an integer input N, print a staircase out of height N. For example, given the input 4, print out the following staircase:
-
-    #
-   ##
-  ###
- ####
-#####
-
-
-PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
-
 ************************************************
-
 */
-public class Stairs {
-
-
-	public static void stairs(int input) {
-		//YOUR CODE HERE
+public class Stairs
+{
+	public static void stairs(int input)
+	{
+		int height = input;
+		for (int line = 0; line <= input; line++)
+		{
+			for (int spaces = height; spaces > 0; spaces--)
+			{
+				System.out.print(" ");
+			}
+			for (int pound = 0; pound <= line; pound++)
+			{
+				System.out.print("#");
+			}
+			System.out.println();
+			height--;
+		}
 		return;
 	}
 
-
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		File file = new File("Stairs.txt");
-		try {
+		try
+		{
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
+			for(int i = 0; i < numberOfCases; i++)
+			{
 				int height = scan.nextInt();
 				stairs(height);
 			}
 		}
-		catch (FileNotFoundException e) {
+		catch (FileNotFoundException e)
+		{
 			e.printStackTrace();
 		}
 	}
