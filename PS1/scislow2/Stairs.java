@@ -31,11 +31,15 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Stairs {
 
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
-			System.out.println("Input stair height: ");
-			int height = scan.nextInt();
-			stairs(height);
+		int t = scan.nextInt();
+		ArrayList<Integer> h = new ArrayList<Integer>();
+		for(int i=0;i<t;i++){
+			h.add(scan.nextInt());
+		}
+		for(int i=0; i<t; i++){
+			stairs(h.get(i));
+		}
 		scan.close();
 	}
 	

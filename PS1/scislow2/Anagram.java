@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 /*
 ************************************************
@@ -26,7 +25,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
+For example, the String  will return true (rotator), while the String  will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -37,26 +36,47 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 public class Anagram {
 
-	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
-	}
-
-
-
 	public static void main(String[] args) {
-		File file = new File("Anagram.txt");
-		try {
-			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
-				String input = scan.next();
-				System.out.println(anagram(input));
-			}
-			scan.close();
+		Scanner scan = new Scanner(System.in);
+		int t= scan.nextInt();
+		ArrayList<String> s = new ArrayList<String>();
+		for(int i=0;i<=t;i++){
+			s.add(scan.nextLine());
 		}
-		catch (FileNotFoundException e) {
-			e.printStackTrace();
+		for(int i=1;i<=t;i++){
+			System.out.println(anagram(s.get(i)));
+		}
+		scan.close();
+	}
+	
+	public static boolean anagram(String input) {
+		int numOdd = 0;
+		int count = 0;
+		char[] chars = input.toLowerCase().toCharArray();
+		ArrayList<Character> letters = new ArrayList<Character>();
+		for(int i=0; i<chars.length; i++){
+			for(int j=0; j<chars.length;j++){
+				if(chars[i] == chars[j] && !letters.contains(chars[i])){
+					count++;
+				}
+			}
+			if(!letters.contains(chars[i])){
+				letters.add(chars[i]);
+			}
+			if(count%2==1){
+				numOdd++;
+			}
+			count=0;
+		}
+		
+		if(input.length()%2==0 && numOdd > 0){
+			return false;
+		} else if (numOdd>1){
+			return false;
+		} else {
+			return true;
 		}
 	}
+
+
 }

@@ -33,35 +33,43 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Diagonal {
 
-	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
-	}
-
-
-
-
-
-	public static void main(String[] args) {
-		File file = new File("Diagonal.txt");
-		try {
-			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
-				int N = scan.nextInt();
-				int[][] matrix = new int[N][N];
-				for(int j = 0; j < N; j++) {
-					for(int k = 0; k < N; k++) {
-						matrix[j][k] = scan.nextInt();
-					}
-				}
-				System.out.println(diagonal(matrix));
-			}
-			scan.close();
-		}
-		catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        int[][] mat = new int[t][t];
+        for(int i=0;i<t;i++){
+            for(int j=0;j<t;j++){
+                mat[i][j] = s.nextInt();
+            }
+        }
+        System.out.println("\n" + diagonals(mat, t));
+        s.close();
+    }
+    
+    public static int diagonals(int[][] mat, int rowcol){
+        int sum1 = 0;
+        int sum2 = 0;
+        System.out.print("((");
+        for(int i=0; i<rowcol; i++){
+            sum1 += mat[i][i];
+            if(i<rowcol-1){
+            	System.out.print(mat[i][i] +" + ");
+            } else {
+            	System.out.print(mat[i][i]);
+            }
+        }
+        System.out.print(") (");
+        int index = rowcol-1;
+        for(int i=0;i<rowcol;i++){
+            sum2+=mat[index][i];
+            if(i<rowcol-1){
+            	System.out.print(mat[index][i] +" + ");
+            } else {
+            	System.out.print(mat[index][i]);
+            }
+            index--;
+        }
+        System.out.print("))");
+        return Math.abs(sum1*sum2);
+    }
 }
