@@ -28,9 +28,17 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 '''
 
-def diagonal(input):
+def diagonal(matrix):
     # YOUR CODE HERE
-    return 0
+    diag1=0
+    for i in xrange(len(matrix)):
+        diag1+=int(matrix[i][i])
+    diag2=0
+    for j in xrange(len(matrix)):
+        diag2+=int (matrix[j][len(matrix)-j-1])
+
+
+    return(diag1*diag2)
 
 try:
     with open('Diagonal.txt') as f:
