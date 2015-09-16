@@ -29,8 +29,21 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 '''
 
 def diagonal(input):
-    # YOUR CODE HERE
-    return 0
+    count = 0
+    for i in range(0, len(input)):
+        for j in range(0, len(input[i])):
+            if (i == j):
+                # print str(i) + ', ' + str(j)
+                count += int(input[i][j])
+    for i in range(0, len(input)):
+        for j in range(0, len(input[i])):
+            if (i == j):
+                # print str(i) + ', ' + str(j)
+                x = len(input) - 1 - i
+                # y = len(input[x]) - 1 - j
+                # print str(x) + ', ' + str(j)
+                count += int(input[x][j])
+    return count
 
 try:
     with open('Diagonal.txt') as f:
@@ -47,6 +60,7 @@ try:
                 row = data[:dimen]
                 matrix.append(row)
                 data = data[dimen:]
-            print diagonal(matrix)
+            # print (matrix)
+            print (diagonal(matrix))
 except IOError, e:
     print e
