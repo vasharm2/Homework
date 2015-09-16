@@ -20,7 +20,7 @@ Given a String S, determine if it is an anagram of a palindrome.
 Return true if the String is an anagram of a palindrome, and false otherwise. 
 For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
-************************************************
+*************************************************
 */
 
 public class Anagram {

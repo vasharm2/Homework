@@ -26,7 +26,7 @@ Given an integer input N, print a staircase out of height N. For example, given 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
-************************************************
+*************************************************
 
 */
 public class Stairs {
