@@ -35,24 +35,33 @@ public class Diagonal {
 
 	public static int diagonal(int[][] input) {
 		
-		Scanner reader = new Scanner(System.in);
-		System.out.println("Enter the first number");
-		// get user input for a
-		int a = reader.nextInt();
-		System.out.println(a);
-		
+		// Get and display size of matrix.
 		int sizeOfMatrix = input.length;
+		System.out.println();
 		System.out.println("Size of matrix: " + sizeOfMatrix);
 		
 		// Store the numbers in the diagonals in two arrays.
 		int[] diagonal1 = new int[sizeOfMatrix];
-		int[] diagonal2 = diagonal1;
+		int[] diagonal2 = new int[sizeOfMatrix];
 		
+		// Get the numbers in the diagonals.
 		for (int i = 0; i < sizeOfMatrix; i++){
-			diagonal1[i] = input[i][i];
-			diagonal2[i] = input[sizeOfMatrix -i - 1][i];
+			diagonal1[i] = input[i][i];			
+			diagonal2[i] = input[i][sizeOfMatrix - i - 1];
 		}
 		
+		// Print the numbers in the left to right diagonal.
+		System.out.println("Numbers in first diagonal: ");
+		for (int i = 0; i < diagonal1.length ; i++){
+			System.out.print(diagonal1[i]+" ");
+		}
+		
+		// Print the numbers in the right to left diagonal.
+		System.out.println();
+		System.out.println("Numbers in second diagonal: ");
+		for (int i = 0; i < diagonal2.length ; i++){
+			System.out.print(diagonal2[i]+", ");
+		}		
 		
 		// Find sum of two diagonals.
 		int diag1Sum = 0;
@@ -64,6 +73,8 @@ public class Diagonal {
 		}
 
 		// Return the product of the two sums.
+		System.out.println();
+		System.out.println("Product: ");
 		return diag1Sum * diag2Sum;
 	}
 

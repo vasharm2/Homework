@@ -41,7 +41,7 @@ public class Stairs {
 			String step = "";
 			// Adds the number to the step according to position in staircase.
 			for (int s = 0; s< i;s++){
-				step+=input;
+				step+="#";
 			}
 			System.out.println(step);			
 		}

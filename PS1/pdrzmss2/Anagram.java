@@ -38,16 +38,76 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		String original = input;
-		String reversed = "";
 		
-		// Iterate through letters backwards and put them in new string.
-		for (int i = original.length() -1; i >= 0; i--){
-			reversed += original.charAt(i);
+		// Displays the input.
+		System.out.println("");
+		System.out.println("Input: "+ input);
+		
+		// Checks if it is ok to have one letter that has no pair.
+		double halfCount = (double)input.length()/2;
+		boolean isEven = halfCount % 2 == 0;
+		System.out.println("Has even number of letters: "+isEven);
+		
+		// Convert all letters to lowercase.
+		input = input.toLowerCase();
+		System.out.println("Lower case input: "+ input);
+		
+		// Make list that will store unique characters found in input.
+		List<Character> diffLetters = new ArrayList<Character>();
+		
+		// Loop through the list and add unique characters to list.
+		for (int i = 0; i < input.length();i++){
+			char letter = input.charAt(i);
+			
+			boolean found = false;
+			for (int c = 0; c < diffLetters.size() ;c++){
+				if (diffLetters.contains(letter)){
+					found = true;
+					break;
+				}
+			}
+			
+			if (!found){
+				diffLetters.add(letter);
+			}
 		}
 		
-		// Check if they are equal, ignoring casing.
-		return (original.equalsIgnoreCase(reversed));
+		System.out.println("Number of different characters: "+diffLetters.size());
+		
+		
+		// Loop through each letter and check how many of the same are in the input. If it is
+		// odd, it has no pair. If the word has odd letters, the word can still be an anagram
+		// if the number of characters with no pair is smaller than 1. If it is odd, all
+		// characters must have pairs.
+		int numOfCharactersWithNoPair = 0;
+		
+		for (int i = 0; i < diffLetters.size(); i++){
+			int sameLetterCount = 0;
+			for (int p = 0; p < input.length();p++){
+				if (input.charAt(p) == diffLetters.get(i))
+					sameLetterCount++;
+			}
+			
+			if (sameLetterCount < 2){
+				numOfCharactersWithNoPair++;
+			}
+		}
+		
+		System.out.println("Number of characters without pair: "+ numOfCharactersWithNoPair);
+		
+		// Check how many characters with no pair and returns the appropriate boolean.
+		if (isEven && numOfCharactersWithNoPair != 0){
+			System.out.println("The word cannot be an anagram of a palindrome because there is a character without a pair and the word is even.");
+			return false;
+		}
+		if (!isEven && numOfCharactersWithNoPair <= 1){
+			System.out.println("Word is anagram of palindrome!");
+			return true;
+		}
+		
+		System.out.println("This word is not a palindrome because there is more than one character without a pair.");
+		return false;
+		
 
 	}
 
