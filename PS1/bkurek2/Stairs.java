@@ -33,29 +33,19 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		if (input >= 0) {
-			for (int spaces = input; spaces >= 0; spaces--) {
-				for (int i = 0; i < spaces; i++) {
-					System.out.print(" ");
-				}
-				
-				int stairs = input - spaces + 1;
-				
-				for (int i = 0; i < stairs; i++) {
-					System.out.print("#");
-				}
-				System.out.println();
+		for (int spaces = input; spaces >= 0; spaces--) {
+			for (int i = 0; i < spaces; i++) {
+				System.out.print(" ");
 			}
-		}
-		
-		else {
-			for (int stairs = 1; stairs <= -input + 1; stairs++) {
-				for (int i = 0; i < stairs; i++) {
-					System.out.print("#");
-				}
-				System.out.println();
+				
+			int stairs = input - spaces + 1;
+				
+			for (int i = 0; i < stairs; i++) {
+				System.out.print("#");
 			}
+			System.out.println();
 		}
+		System.out.println();
 	}
 
 
