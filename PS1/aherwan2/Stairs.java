@@ -33,10 +33,11 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		for(int i = 0; i < input; i++){
-			for(int j = 1; j <= input; j++){
-				if(i + j < input) System.out.print(" ");
-				if(i + j >= input) System.out.print("#");
+		for (int x = 1; x<input+1; x++)
+		{
+			for (int y=0; y<x; y++)
+			{
+				System.out.print("*");
 			}
 			System.out.println();
 		}
