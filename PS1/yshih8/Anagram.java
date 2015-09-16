@@ -26,8 +26,37 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
+		int L = input.length();
+		int countChar = 0;
+		int countOdd = 0;
+		int countArray = 0;
+		char current, compare;
+		char[] appeared;
+		for (int i = 0; i < (L - 1); i++)
+		{
+			countChar = 1;
+			current = input.charAt(i);
+			for (int k = 0; k < appeared.length; k++) 
+			{
+				if (appeared[k] == current)
+					i++;
+			}
+			current = input.charAt(i);
+			appeared[countArray] = current;
+			countArray++;
+			for (int j = (i + 1); i < L; j++)
+			{
+				compare = input.charAt(j);
+				if (compare == current)
+					countChar++;
+			}
+			if (countChar%2 == 1)
+				countOdd++;
+		}
+		if (countOdd > 1)
+			return false;
+		else
+			return true;
 	}
 
 
