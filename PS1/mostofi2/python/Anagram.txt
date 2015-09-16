@@ -1,5 +1,7 @@
-4
+6
 aabb
 abba
 xyyxy
 axsx
+aaaa
+bbbabba
