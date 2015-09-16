@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 
 /*
@@ -37,6 +38,22 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static void main(String[] args) {
+		File file = new File("Anagram.txt");
+		try {
+			Scanner scan = new Scanner(file);
+			int numberOfCases = scan.nextInt();
+			for(int i = 0; i < numberOfCases; i++) {
+				String input = scan.next();
+				System.out.println(anagram(input));
+			}
+			scan.close();
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	//Text file wasn't working for me so this is my test code:
+	/*public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int t= scan.nextInt();
 		ArrayList<String> s = new ArrayList<String>();
@@ -47,7 +64,7 @@ public class Anagram {
 			System.out.println(anagram(s.get(i)));
 		}
 		scan.close();
-	}
+	}*/
 	
 	public static boolean anagram(String input) {
 		int numOdd = 0;
