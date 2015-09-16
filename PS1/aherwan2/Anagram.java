@@ -38,36 +38,15 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		
-		/*
-			This program does the following:
-			1.  Creates a boolean to store parity (currentCharParity)
-			2.  For each character c : 
-				a. Record its type
-				b. If character has occured before in string, skip over
-				c. Negate currentCharParity each time the same character occurs (including itself)
-			3.  If there are less than two true statements, return true
-
-
-			This works because all palindromes "123454321" have at most one character of odd parity,
-			and all strings with at most one odd character can be rearranged into a palindrome.
-		*/
-		int trues = 0;
-		boolean currentCharParity;
-
-		for(int i = 0; i < input.length(); i++){
-			currentCharParity = false;
-			char c = input.charAt(i);
-			for(int j = 0; j < input.length(); j++){
-				if(input.charAt(j) == c){
-					if(j < i) break;
-					currentCharParity = !currentCharParity;
-				}
-			}
-			if(currentCharParity) trues++;
+		int x = input.length();
+		 
+		String temp = new StringBuilder(input).reverse().toString();
+		if (input.equals(temp))
+		{
+			return true;
 		}
-		if(trues < 2) return true;
-		return false;
+		else
+			return false;
 	}
 
 
