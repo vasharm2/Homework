@@ -33,10 +33,10 @@ public class Stairs {
 
 	//Uses nested loops to iterate over each line to print the appropriate number of spaces and #s to form a staircase.
 	public static void stairs(int input) {
-		for(int i = input; i >= 0; i --)
-		{
-			int j = 0;
-			for(j = 0; j <= i; j++) 
+		for(int i = input; i >= 0; i --)		//There's some confusion between the correlation between the input and the height of the stairs.
+		{										//The documents I have all specify it to be 1 higher than the number.
+			int j = 0;							//The updates in the github now (9/15 20:26) are inconsistent between PS1.txt and Stairs.java.
+			for(j = 0; j <= i; j++) 			//I have followed the instructions in this directory, to make it 1 higher than the input.
 			{
 				System.out.print(" ");
 			}
@@ -44,6 +44,7 @@ public class Stairs {
 				System.out.print("#");
 			System.out.println();
 		}
+		System.out.println();
 		return;
 	}
 

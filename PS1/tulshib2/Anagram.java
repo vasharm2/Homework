@@ -40,6 +40,7 @@ public class Anagram {
 	//Checks if every letter in the input string has a pair, and if there is just a single unpaired letter.
 	public static boolean anagram(String input) 
 	{
+		input = input.toLowerCase();
 		String str = new String(input);
 		if(str.length() == 1)
 			return true;
