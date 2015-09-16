@@ -45,7 +45,7 @@ public class Diagonal {
         diagonalRL += input[r][length-1-r];
     }
 
-		return 0;
+		return diagonalLR * diagonalRL;
 	}
 
 

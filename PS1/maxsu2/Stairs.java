@@ -49,7 +49,7 @@ public class Stairs {
 
 
 	public static void main(String[] args) {
-		/*File file = new File("Stairs.txt");
+		File file = new File("Stairs.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
@@ -61,8 +61,7 @@ public class Stairs {
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-    */
-    stairs(4);
+
 	}
 
 }
