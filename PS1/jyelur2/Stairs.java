@@ -17,8 +17,8 @@ Question 3
 
 Given an integer input N, print a staircase out of height N. For example, given the input 4, print out the following staircase:
 
-    #
-   ##
+    #    i = 5 input = 4
+   ##    i = 5 input = 3
   ###
  ####
 #####
@@ -33,18 +33,34 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		for (int x = 1; x<input+1; x++)
-		{
-			for (int y=0; y<x; y++)
-			{
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		return;
+		
+		int char[][] = new char[input][input]; 
+		int c = input-1;
+		
+	  int d = 0;
+    for(int i = input-1; i < 0; i--)
+	{
+	
+       for(int j = d; j < input; j++)
+          {
+			box[i][j] = '#'; 	
+	          }
+                d++;
+	
 	}
-
-
+    
+    for(int l = 0; l < input; l++)
+    {
+    
+    for(int m = 0; m < input; m++)
+    	
+    {
+    	System.out.print(box[l][m])
+         }
+    
+	}
+	
+	}
 	public static void main(String[] args) {
 		File file = new File("Stairs.txt");
 		try {

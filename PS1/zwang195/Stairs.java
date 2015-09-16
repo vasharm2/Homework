@@ -31,16 +31,24 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Stairs {
 
-
 	public static void stairs(int input) {
-		for (int x = 1; x<input+1; x++)
-		{
-			for (int y=0; y<x; y++)
-			{
-				System.out.print("*");
+
+		int a = input;
+		int i, j, k;
+		String space = " ";
+		String star = "*";
+		String line = "";
+		for (i=0;i<a;i++) {
+			for (j=0;j<a-i-1;j++) {
+				line = line + space;
 			}
-			System.out.println();
+			for (k= a-i-1; k < a; k++) {
+				line = line + star;
+			}
+			System.out.println(line);
+			line = "";
 		}
+		System.out.println();
 		return;
 	}
 

@@ -33,14 +33,22 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		for (int x = 1; x<input+1; x++)
+		int lengthStairs=input;
+		int numStep=1;
+		for(int x=0;x<lengthStairs;x++)
 		{
-			for (int y=0; y<x; y++)
+			for(int y=lengthStairs-x;y>0;y--)
 			{
-				System.out.print("*");
+				System.out.print(" ");
 			}
-			System.out.println();
+			for(int z=numStep+x;z>0;z--)
+			{
+				System.out.print("#");
+			}
+			System.out.println("");
+			
 		}
+		//YOUR CODE HERE
 		return;
 	}
 

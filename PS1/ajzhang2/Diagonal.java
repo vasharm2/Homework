@@ -38,7 +38,7 @@ public class Diagonal {
 		int secondDiag = 0;
 		for (int x = 0; x < input.length; x++) {
 			firstDiag = input[x][x];
-			secondDiag = input[x][input.length -x-1];
+			secondDiag = input[x][x - input.length - x - 1];
 		}
 		return firstDiag * secondDiag;
 

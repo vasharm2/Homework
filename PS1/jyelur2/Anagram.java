@@ -38,15 +38,34 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		int x = input.length();
-		 
-		String temp = new StringBuilder(input).reverse().toString();
-		if (input.equals(temp))
-		{
-			return true;
-		}
-		else
-			return false;
+        int count = 0;
+        int count1 = 0;
+        
+        for(int i = 0; i < input.length(); i++)
+        {
+            for(int j = input.length()-1; j >= 0; j--)
+            {
+                if (input.charAt(i) == input.charAt(j))
+                    count++;
+            }
+            if(count == 1)
+                count1++;
+            count = 0;
+            
+        }
+        
+        
+        
+        if(count1 > 1)
+        {
+            return false;
+        }
+        else 
+        {
+            return true;
+        }
+
+		
 	}
 
 

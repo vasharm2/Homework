@@ -30,21 +30,17 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 */
 public class Stairs {
-
-
-	public static void stairs(int input) {
-		for (int x = 1; x<input+1; x++)
-		{
-			for (int y=0; y<x; y++)
-			{
-				System.out.print("*");
+	public static void stairs(int input) {	
+		for(int i = 0; i <= input; i++) {
+			for(int z = input-i; z>-1; z--) {
+				System.out.print(" ");
+			}
+			for(int j=0; j<i+1; j++) {
+				System.out.print("#");
 			}
 			System.out.println();
 		}
-		return;
 	}
-
-
 	public static void main(String[] args) {
 		File file = new File("Stairs.txt");
 		try {

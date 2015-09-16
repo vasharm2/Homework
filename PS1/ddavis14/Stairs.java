@@ -32,16 +32,22 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Stairs {
 
 
-	public static void stairs(int input) {
-		for (int x = 1; x<input+1; x++)
-		{
-			for (int y=0; y<x; y++)
-			{
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		return;
+	public static void stairs(int input)
+    {
+		//YOUR CODE HERE
+        String n;
+            for(int i = 1; i <= input; i++)
+            {
+                System.out.println();
+                for(int s = input; s >= i; s--)
+                {
+                    System.out.print(" ");
+                }
+                for(int m = i; m > 0; m--)
+                {
+                    System.out.print("#");
+                }
+            }
 	}
 
 

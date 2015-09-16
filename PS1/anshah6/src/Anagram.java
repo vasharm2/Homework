@@ -26,7 +26,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
+For example, the String â€œoatrtroâ€� will return true (rotator), while the String â€œfalseâ€� will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -36,21 +36,6 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-
-	public static boolean anagram(String input) {
-		int x = input.length();
-		 
-		String temp = new StringBuilder(input).reverse().toString();
-		if (input.equals(temp))
-		{
-			return true;
-		}
-		else
-			return false;
-	}
-
-
-
 	public static void main(String[] args) {
 		File file = new File("Anagram.txt");
 		try {
@@ -64,6 +49,49 @@ public class Anagram {
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
+		}
+	}
+	public static boolean anagram(String input) {
+		System.out.print(input+":  ");
+		input = input.trim();
+		input = input.toLowerCase();
+		int n = input.length();
+		int counter=0;
+		double oddCounter=0.0;
+		char[] word = new char[n];
+		for (int i = 0; i < n; i++) {
+			word[i] = input.charAt(i);
+		}
+		//This is the test for the even case
+		if(n%2 == 0) {
+			for (int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					if (word[i] == word[j]) 
+						counter++;
+				}
+				if (counter%2 != 0)
+					return false;
+				//If one letter fails then it is not an anagram
+			}
+			return true;
+			//If it makes it here it has to be an anagram
+		}
+		else {
+			//This is the odd case
+			for (int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					if (word[i] == word[j]) 
+						counter++;
+				}
+				if (counter%2 != 0)
+					oddCounter+= 1/counter;
+				if(oddCounter >= 2)
+					return false;
+					//If two letters fail then it is not an anagram
+				counter = 0;
+			}
+			return true;
+			//If it makes it here it has to be an anagram
 		}
 	}
 }

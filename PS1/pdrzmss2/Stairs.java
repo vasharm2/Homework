@@ -33,14 +33,19 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		for (int x = 1; x<input+1; x++)
-		{
-			for (int y=0; y<x; y++)
-			{
-				System.out.print("*");
+		
+		int maxWidth = input;
+		
+		// Keeps track of step.
+		for (int i = 1; i <= maxWidth;i++){
+			String step = "";
+			// Adds the number to the step according to position in staircase.
+			for (int s = 0; s< i;s++){
+				step+="#";
 			}
-			System.out.println();
+			System.out.println(step);			
 		}
+		
 		return;
 	}
 

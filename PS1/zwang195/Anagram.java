@@ -1,4 +1,4 @@
-import java.util.*;
+﻿import java.util.*;
 import java.io.*;
 
 /*
@@ -38,15 +38,27 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		int x = input.length();
-		 
-		String temp = new StringBuilder(input).reverse().toString();
-		if (input.equals(temp))
-		{
-			return true;
-		}
-		else
-			return false;
+			String b = input;
+			String a = b.toLowerCase();
+			int i = 0;
+			int j;
+			int count=0;
+			int countMaxOdd=0;
+			int odd=0;
+			for (i = 0; i<a.length(); i++){
+					for (j = 0; j<a.length(); j++) {
+						if (a.charAt(i)==a.charAt(j)) {
+							count=count+1;
+						}			
+					}
+					if (count%2 == 1) {
+						odd = odd + 1;
+						if  (count >= countMaxOdd) countMaxOdd = count;
+					}
+					count = 0;
+			}
+			if (odd == countMaxOdd) return true;
+		return false;
 	}
 
 
