@@ -38,8 +38,18 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		System.out.println(input.length());
-		return false;
+		int length = input.length;
+		int charArray [] = new int [26];
+		for (int i = 0; i < length; i++) {
+			char atIndex = input.charAt(i);
+			charArray[(int) (atIndex-'a')]++;
+		}
+		int numOdds = 0; 
+		for (int j = 0; j < 26; j++){
+			numOdds += charArray [j] % 2 
+		}
+		if (numOdds > 1) {return false;
+		} else {return true;}
 	}
 
 
