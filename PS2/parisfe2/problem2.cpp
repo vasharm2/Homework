@@ -32,6 +32,7 @@ http://www.cplusplus.com/reference/cmath/pow/
 */
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
