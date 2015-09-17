@@ -38,7 +38,7 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
+		System.out.println(input.length());
 		return false;
 	}
 
