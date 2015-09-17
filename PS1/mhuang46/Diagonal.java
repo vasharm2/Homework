@@ -2,13 +2,13 @@ import java.util.*;
 import java.io.*;
 
 /*
-************************************************
+ ************************************************
   ____ ____    _  ___   __   
  / ___/ ___|  / |/ _ \ / /_  
 | |   \___ \  | | (_) | '_ \ 
 | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/ 
-                             
+
 
 Problem set 1
 
@@ -28,21 +28,21 @@ Return: (4+1+2)*(9+1+7) = 119
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
-************************************************
+ ************************************************
 
-*/
+ */
 public class Diagonal
 {	
 	public static int diagonal(int[][] input)
 	{
 		int sum1 = 0;
 		int sum2 = 0;
-		
+
 		int count = input.length - 1;
 		for (int i = 0; i < input.length; i++)
 		{
-				sum1 += input[i][i];
-				sum2 += input[count - i][i];
+			sum1 += input[i][i];
+			sum2 += input[count - i][i];
 		}
 		return sum1 * sum2;
 	}
