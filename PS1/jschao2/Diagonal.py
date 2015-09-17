@@ -28,9 +28,16 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 '''
 
-def diagonal(input):
-    # YOUR CODE HERE
-    return 0
+def diagonal(diag):
+    #Define variables and constants
+    sum1 = 0
+    sum2 = 0
+    
+    for x in range(0, len(diag)): #calculate left to right diagonal sum
+        sum1 += int(diag[x][x])
+    for y in range(0, len(diag)):
+        sum2 += int(diag[y][len(diag) - y - 1]) #calculate right to left diagonal sum
+    return sum1*sum2
 
 try:
     with open('Diagonal.txt') as f:

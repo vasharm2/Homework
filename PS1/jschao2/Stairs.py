@@ -26,8 +26,15 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 '''
 
-def stairs(input):
-    # YOUR CODE HERE
+def stairs(height):
+    height = int(height) # turn the input into an int to make calculations easier
+    pound = 1 #number of pound signs to print
+    for i in range (0,height):
+        print " "*(height-1) + "#"*pound
+        pound += 1
+        height -= 1
+
+    print 
     pass;
 
 try:

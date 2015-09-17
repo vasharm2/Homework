@@ -31,8 +31,17 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 '''
 
 def anagram(word):
-    word = word.lower()
-    return False
+    unpairedLetters = 0
+    
+    while (word and unpairedLetters < 2): #remove all instances of paired letters
+        Found = word.count(word[unpairedLetters])
+        word = word.replace(word[unpairedLetters],"")
+        unpairedLetters += Found % 2
+        
+    if unpairedLetters == 2:
+        return False
+    else: #return true when all letters are paired, with one unpaired at the maximum (e.g. abbba) has one unpaired "b"
+        return True
 
 try:
     with open('Anagram.txt', 'r') as f:
