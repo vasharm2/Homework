@@ -34,11 +34,34 @@ public class Stairs {
 
 	public static void stairs(int input) {
 		//YOUR CODE HERE
+		
+		for (int i=0; i<input; i=i+1)
+		{
+			for (int j=0; j<input-1-i; j=j+1)
+			{
+			System.out.print(" ");
+			}
+			for (int k=0; k<i+1; k=k+1)
+			{
+				System.out.print("#");
+				
+			}
+			System.out.print("\n");
+		
+		}
+		
 		return;
 	}
 
+	  /*public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		int test = in.nextInt();
+		System.out.println(test);
+		stairs(7);
+		}*/
+	 
 
-	public static void main(String[] args) {
+	    public static void main(String[] args) {
 		File file = new File("Stairs.txt");
 		try {
 			Scanner scan = new Scanner(file);

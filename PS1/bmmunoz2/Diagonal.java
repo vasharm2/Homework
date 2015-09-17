@@ -31,15 +31,66 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 
 */
+
+
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
 		//YOUR CODE HERE
-		return 0;
+		
+		
+		int max=input.length;
+		
+
+		
+		int sum1=0;
+		
+		
+		for (int i=0; i<max; i++)
+		{
+			for (int j=0; j<=max; j++)
+					{
+				if (i==j)
+				sum1 = sum1 + input[i][j];
+					}
+		}
+		
+		
+		int sum2=0;
+		
+		int n=max-1;
+		
+		for (int i=0; i<max; i++)
+		{
+			for (int j=n; j>=0; j--)
+				
+					{
+				if (i+j==n)
+				{
+				sum2 = sum2 + input[i][j];
+			
+				}
+					}
+		}
+		
+		int total;
+		
+		System.out.println(sum1);
+		System.out.println(sum2);
+		
+		total= sum1 * sum2;
+		
+		
+		return total;
 	}
 
 
-
+/*public static void main(String[] args) {
+ 		int matrix[][] = {{4,5,7},
+						  {3,1,5},
+						  {9,3,2}};
+		System.out.println(diagonal(matrix));
+ }*/
 
 
 	public static void main(String[] args) {
