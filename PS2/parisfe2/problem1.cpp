@@ -43,6 +43,6 @@ int main() {
 
         if (i == 3) {
             cout << "I hate my startup." << endl;
-            PrintSecondary();
+            printSecondary();
         }
 }
