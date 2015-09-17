@@ -41,7 +41,7 @@ Submissions<br />
 6. Solve the problems!!!
 8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
 9. Following that (in the same directory), add your changes files to be staged for a commit, and commit your changes:
-```git add [FILE]```
+```git add [FILE]``` and then a 
 ```git commit -m "PSET submission"```
 10. then run ```git push origin master``` (you may need to ```git pull``` to catch up to master)
 11. On github.com/[YOUR_USERNAME]/Submissions, click the button for a new pull request (on the right sidebar)
