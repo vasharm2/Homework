@@ -36,30 +36,23 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 
 public class Anagram {
-    private static boolean anagram(String head, String tail) {
-        if (tail.equals("")) {
-            return palindrome(head);
-        } else {
-            for (int i = 0; i < tail.length(); ++i) {
-                if (anagram(head + tail.charAt(i), tail.substring(0, i) + tail.substring(i + 1))) {
-                    return true;
-                }
-            }
-            return false;
+    public static boolean anagram(String input) {
+        int[] letters = new int[26];
+        for (char c : input.toCharArray()) {
+            letters[c - 'a']++;
         }
-    }
 
-    private static boolean palindrome(String input) {
-        for (int i = 0; i < input.length() / 2; ++i) {
-            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
-                return false;
+        boolean seenOdd = false;
+        for (int c : letters) {
+            if (c % 2 == 1) {
+                if (seenOdd) {
+                    return false;
+                } else {
+                    seenOdd = true;
+                }
             }
         }
         return true;
-    }
-
-    public static boolean anagram(String input) {
-        return anagram("", input);
     }
 
     public static void main(String[] args) {
