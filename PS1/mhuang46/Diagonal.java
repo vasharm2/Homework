@@ -31,27 +31,38 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 
 */
-public class Diagonal {
-
-	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+public class Diagonal
+{	
+	public static int diagonal(int[][] input)
+	{
+		int sum1 = 0;
+		int sum2 = 0;
+		
+		int count = input.length - 1;
+		for (int i = 0; i < input.length; i++)
+		{
+				sum1 += input[i][i];
+				sum2 += input[count - i][i];
+		}
+		return sum1 * sum2;
 	}
 
 
-
-
-
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		File file = new File("Diagonal.txt");
-		try {
+		try
+		{
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
+			for(int i = 0; i < numberOfCases; i++)
+			{
 				int N = scan.nextInt();
 				int[][] matrix = new int[N][N];
-				for(int j = 0; j < N; j++) {
-					for(int k = 0; k < N; k++) {
+				for(int j = 0; j < N; j++)
+				{
+					for(int k = 0; k < N; k++)
+					{
 						matrix[j][k] = scan.nextInt();
 					}
 				}
@@ -59,9 +70,9 @@ public class Diagonal {
 			}
 			scan.close();
 		}
-		catch (FileNotFoundException e) {
+		catch (FileNotFoundException e)
+		{
 			e.printStackTrace();
 		}
 	}
-
 }
