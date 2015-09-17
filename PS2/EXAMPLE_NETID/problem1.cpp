@@ -34,7 +34,7 @@ On Windows:
 using namespace std;
 
 void printSecondary() {
-    cout << "... but maybe I will make a better one one day?" << endl
+    cout << "... but maybe I will make a better one one day?" << endl;
 }
 
 int main() {
@@ -43,6 +43,6 @@ int main() {
 
         if (i == 3) {
             cout << "I hate my startup." << endl;
-            PrintSecondary;
+            PrintSecondary();
         }
 }
