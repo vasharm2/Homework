@@ -33,13 +33,27 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		//YOUR CODE HERE
+		int x = 1;
+		int n = 0;
+		while (input + 1 > x) {
+			System.out.println("");
+			while (input - x > n) {
+				System.out.print(" ");
+				n = n + 1;
+				}
+			while (input - n > 0) {
+				System.out.print("#");
+				n = n + 1;
+				}
+			x = x + 1;
+			n = 0;
+			}
 		return;
 	}
 
-
 	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
+		System.out.println(System.getProperty("user.dir"));
+		File file = new File("src/Stairs.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();

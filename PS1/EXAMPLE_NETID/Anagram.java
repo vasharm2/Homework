@@ -38,14 +38,61 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		return false;
+		int x = 0;
+		int length = input.length();
+		Boolean palindrome = true;
+		Boolean even = true;
+		if (length % 2 == 1)
+		    even = false;
+		char[] str = input.toCharArray();
+		char letter;
+		int z = 0;
+		int n = 0;
+		while (n < length)
+		{
+			letter = str[n];
+			if (letter != ' ' )
+			{
+			    z = n + 1;
+			    while (z < length)
+			    {
+			         if (letter == input.charAt(z))
+			         {
+			              str[n] = ' ';
+			              str[z] = ' ';
+			              z = length;
+			         }
+			         z++;
+			    }
+			         if (z != length + 1)
+			         {
+			                 x++;
+			                 str[n] = ' ';
+			         }
+			}
+		n++;
+		}
+		if (even)
+		{
+		     if (x == 0)
+		           palindrome = true;
+		     else
+		           palindrome = false;
+		}
+		else
+		{
+		     if (x == 1)
+		           palindrome = true;
+		     else
+		           palindrome = false;
+		}
+		return palindrome;
 	}
 
 
 
 	public static void main(String[] args) {
-		File file = new File("Anagram.txt");
+		File file = new File("src/Anagram.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();

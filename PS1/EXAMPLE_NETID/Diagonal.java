@@ -34,8 +34,20 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		return 0;
+		int N = input.length - 1;
+		int a = input[0][0];
+		int b = input[N][0];
+		int k = 1;
+		for(int j = 1; j <= N; j++)
+		{
+			a = a + input[j][j];
+		}
+		for(int j = N - 1; j >= 0; j--)
+		{
+			b = b + input[j][k];
+			k++;
+		}
+		return a * b;
 	}
 
 
@@ -43,7 +55,7 @@ public class Diagonal {
 
 
 	public static void main(String[] args) {
-		File file = new File("Diagonal.txt");
+		File file = new File("src/Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
