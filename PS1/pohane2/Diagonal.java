@@ -34,23 +34,22 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		int sum1 = 0;
-		int sum2 = 0;
-		int N = input.length;
-		for(int l = 0; l < N; l++){
-			sum1 = sum1 + input[l][l];
+		int counter, shift, product;
+		int upSum = 0;
+		int downSum = 0;
+		shift = input.length - 1;
+		for(counter = 0; counter<input.length; counter++){
+			int num1 = input[counter][counter];
+			upSum = upSum + num1;
+			int num2 = input[counter][shift-counter];
+			downSum = downSum + num2;
 		}
-		for (int m = 0; m <N; m++){
-			sum2 =sum2 + input[m][N-m-1];
-			
-		}
-		return sum1*sum2;
+		product = upSum*downSum;
+		System.out.println("The sum of the diagonal going from top left to bottom right is: " + upSum);
+		System.out.println("The sum of the diagonal going from top right to bottom left is: " + downSum);
+		System.out.println("The product of the sums of the diagonals is: ");
+		return product;
 	}
-
-
-
-
 
 	public static void main(String[] args) {
 		File file = new File("Diagonal.txt");
@@ -68,8 +67,7 @@ public class Diagonal {
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
-
-			}
+		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

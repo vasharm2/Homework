@@ -34,29 +34,22 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		int sum1 = 0;
-		int sum2 = 0;
-		int N = input.length;
-		for(int l = 0; l < N; l++){
-			sum1 = sum1 + input[l][l];
-		}
-		for (int m = 0; m <N; m++){
-			sum2 =sum2 + input[m][N-m-1];
-			
-		}
-		return sum1*sum2;
+		int dimensions = input.length;
+		int sum1 = 0;	//sum of numbers in 1st diagonal
+		int sum2 = 0;	//sum of numbers in 2nd diagonal
+		
+		for (int i = 0; i < dimensions; i++){
+			sum1 += input[i][i];	
+			sum2 += input[i][dimensions-1-i];
+			}
+		return sum1 * sum2;
 	}
 
-
-
-
-
 	public static void main(String[] args) {
-		File file = new File("Diagonal.txt");
+		File file = new File("src/Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
+			int numberOfCases = scan.nextInt();	//numberOfCases = dimensions of square
 			for(int i = 0; i < numberOfCases; i++) {
 				int N = scan.nextInt();
 				int[][] matrix = new int[N][N];
@@ -68,11 +61,11 @@ public class Diagonal {
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
-
-			}
+		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 }

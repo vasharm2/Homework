@@ -15,7 +15,7 @@ Problem set 1
 
 Question 2
 
-Given a square matrix size N x N, calculate the product of the sums across the two main diagonals.
+/Given a square matrix size N x N, calculate the product of the sums across the two main diagonals.
 For example, given the input:
 
 3
@@ -34,18 +34,17 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		int sum1 = 0;
-		int sum2 = 0;
-		int N = input.length;
-		for(int l = 0; l < N; l++){
-			sum1 = sum1 + input[l][l];
+		int num1 = 0;
+		int num2 = 0;
+		int product = 0;
+		for (int i = 0; i < input.length; i++){
+			num1 += input[i][i];
 		}
-		for (int m = 0; m <N; m++){
-			sum2 =sum2 + input[m][N-m-1];
-			
+		for (int i = 0; i < input.length; i++){
+			num2 += input[input.length - (i + 1)][i];
 		}
-		return sum1*sum2;
+		product = num1 * num2;
+		return product;
 	}
 
 
@@ -68,8 +67,7 @@ public class Diagonal {
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
-
-			}
+		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

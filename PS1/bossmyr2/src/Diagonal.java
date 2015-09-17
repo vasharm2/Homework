@@ -34,43 +34,36 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		int sum1 = 0;
-		int sum2 = 0;
-		int N = input.length;
-		for(int l = 0; l < N; l++){
-			sum1 = sum1 + input[l][l];
+		int total1 = 0;
+		int total2 = 0;
+		for (int i = 0; i < input.length; i++) {
+			total1 += input[i][i];
 		}
-		for (int m = 0; m <N; m++){
-			sum2 =sum2 + input[m][N-m-1];
-			
+
+		for (int j = 0, k = input.length - 1; j < input.length || k >= 0; j++, k--) {//for loops can't be nested here because they need to increment/decrement at the exact same time
+			total2 += input[j][k];
 		}
-		return sum1*sum2;
+
+		return (total1 * total2);
 	}
 
-
-
-
-
 	public static void main(String[] args) {
-		File file = new File("Diagonal.txt");
+		File file = new File("res/Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
+			for (int i = 0; i < numberOfCases; i++) {
 				int N = scan.nextInt();
 				int[][] matrix = new int[N][N];
-				for(int j = 0; j < N; j++) {
-					for(int k = 0; k < N; k++) {
+				for (int j = 0; j < N; j++) {
+					for (int k = 0; k < N; k++) {
 						matrix[j][k] = scan.nextInt();
 					}
 				}
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
-
-			}
-		catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}

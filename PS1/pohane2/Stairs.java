@@ -33,20 +33,25 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		//YOUR CODE HERE
-      int height=input;
-      int l =0;
-	  while (l<= height){
-	
-		for (int j=height-l; j > 0; j--){
-			System.out.print(" ");
+		int counter = 0;
+		while(counter <= input){
+			int spaces, stars, countSpaces, countStars;
+			countSpaces = 0;
+			countStars = 0;
+			spaces = input - counter;
+			stars = input - spaces;
+			while(countSpaces <= spaces){
+				System.out.print(" ");
+				countSpaces++;
+			}
+			while(countStars <= stars){
+				System.out.print("*");
+				countStars++;
+			}
+			System.out.println("");
+			counter++;
 		}
-		for (int k=l; k > 0; k--){
-         System.out.print("#");
-		}
-		 System.out.println("");
-		l = l+1;
-	  }
+		return;
 	}
 
 
@@ -59,10 +64,12 @@ public class Stairs {
 				int height = scan.nextInt();
 				stairs(height);
 			}
+			scan.close();
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
+
 
 }

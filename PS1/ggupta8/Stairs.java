@@ -33,31 +33,36 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		//YOUR CODE HERE
-      int height=input;
-      int l =0;
-	  while (l<= height){
-	
-		for (int j=height-l; j > 0; j--){
-			System.out.print(" ");
+		int pound = 1;
+		
+		for(int counter = 0; counter <= input; counter++)	{	//number of rows for pyramids
+			int space = 0;
+			while(space + pound <= input + 1)	{	//spaces before hashtags
+				System.out.print(" ");
+				space ++;
+			}
+		
+			int i = 0;
+			while(i < pound)	{	//pound signs
+				System.out.print("#");
+				i ++;
+			}
+		
+			pound ++;
+			System.out.println("");
 		}
-		for (int k=l; k > 0; k--){
-         System.out.print("#");
-		}
-		 System.out.println("");
-		l = l+1;
-	  }
+		return;
 	}
 
 
 	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
+		File file = new File("src/Stairs.txt");
 		try {
 			Scanner scan = new Scanner(file);
-			int numberOfCases = scan.nextInt();
+			int numberOfCases = scan.nextInt();	//numberOfCases = number of stairs
 			for(int i = 0; i < numberOfCases; i++) {
-				int height = scan.nextInt();
-				stairs(height);
+				int height = scan.nextInt();	//height = next number = number of rows + 1
+				stairs(height);	//calling above code
 			}
 		}
 		catch (FileNotFoundException e) {

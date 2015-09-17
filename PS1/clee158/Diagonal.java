@@ -34,19 +34,18 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		//YOUR CODE HERE
-		int sum1 = 0;
-		int sum2 = 0;
-		int N = input.length;
-		for(int l = 0; l < N; l++){
-			sum1 = sum1 + input[l][l];
+		int r = input.length;
+		int cross1 = 0;
+		int cross2 = 0;
+		for (int i=0; i < r; i++){
+			int j = input[i][i];
+			cross1 = cross1 + j;
+			int k = input[i][r-1-i];
+			cross2 = cross2 + k;		
 		}
-		for (int m = 0; m <N; m++){
-			sum2 =sum2 + input[m][N-m-1];
-			
-		}
-		return sum1*sum2;
+		return cross1*cross2;
 	}
+
 
 
 
@@ -68,8 +67,7 @@ public class Diagonal {
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
-
-			}
+		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

@@ -26,10 +26,12 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String "rtatoro" returns true(rotator), while the String "false" returns false.
+For example, the String "oatrtro" will return true (rotator), while the String "false" will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
+
+Code by: bossmyr2
 
 ************************************************
 
@@ -38,68 +40,42 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		input = input.toLowerCase();
-		//delete space, punctuations
-	    HashMap<Integer,String> hm= new HashMap<Integer,String>();
-	    hm.put(0,"a");
-	    hm.put(1, "b");
-	    hm.put(2,"c");
-	    hm.put(3,"d");
-	    hm.put(4,"e");
-	    hm.put(5,"f");
-	    hm.put(6,"g");
-	    hm.put(7,"h");
-	    hm.put(8,"i");
-	    hm.put(9,"j");
-	    hm.put(10,"k");
-	    hm.put(11,"l");
-	    hm.put(12,"m");
-	    hm.put(13,"n");
-	    hm.put(14,"o");
-	    hm.put(15,"p");
-	    hm.put(16,"q");
-	    hm.put(17,"r");
-	    hm.put(18,"s");
-	    hm.put(19,"t");
-	    hm.put(20,"u");
-	    hm.put(21,"v");
-	    hm.put(22,"w");
-	    hm.put(23,"x");
-	    hm.put(24,"y");
-	    hm.put(25,"z");
-	    
-	    
-		int oddCounter = 0;
-		int i=0;
-		while (i<26){
-		  String target = hm.get(i);
-		  String after = input.replaceAll(target,"" );
-	      int charCounter = input.length() - after.length();
-	     if (charCounter%2 != 0)
-	       oddCounter = oddCounter+1;
-	     i =i+1;
+		boolean odd = false;
+
+		while (input.length() > 0) {
+			int counter = 1;
+			char first = input.charAt(0);
+
+			for (int i = 1; i < input.length(); i++) {
+				if (input.charAt(i) == first) {
+
+					counter++;
+				}
+			}
+			input = input.replaceAll(String.valueOf(first), "");//removes characters we've already dealt with
+			if (counter % 2 == 1) {//checks if number of characters of a type is odd
+				if (odd) {
+					return false;
+				} else {
+					odd = true;//changes variable odd so that there are no more than one set off odd numbers in the anagram
+				}
+			}
+
 		}
-		if (oddCounter>1)
-		return false;
-		else
-	     return true;
+		return true;
 	}
 
-
-
 	public static void main(String[] args) {
-		File file = new File("Anagram.txt");
+		File file = new File("res/Anagram.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
+			for (int i = 0; i < numberOfCases; i++) {
 				String input = scan.next();
 				System.out.println(anagram(input));
 			}
 			scan.close();
-		}
-		catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}

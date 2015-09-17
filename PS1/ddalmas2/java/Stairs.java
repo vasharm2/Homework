@@ -26,7 +26,7 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String "rtatoro" returns true(rotator), while the String "false" returns false.
+For example, the String “oatrtro” will return true (rotator), while the String “false” will return false.
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -38,52 +38,29 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		//YOUR CODE HERE
-		input = input.toLowerCase();
-		//delete space, punctuations
-	    HashMap<Integer,String> hm= new HashMap<Integer,String>();
-	    hm.put(0,"a");
-	    hm.put(1, "b");
-	    hm.put(2,"c");
-	    hm.put(3,"d");
-	    hm.put(4,"e");
-	    hm.put(5,"f");
-	    hm.put(6,"g");
-	    hm.put(7,"h");
-	    hm.put(8,"i");
-	    hm.put(9,"j");
-	    hm.put(10,"k");
-	    hm.put(11,"l");
-	    hm.put(12,"m");
-	    hm.put(13,"n");
-	    hm.put(14,"o");
-	    hm.put(15,"p");
-	    hm.put(16,"q");
-	    hm.put(17,"r");
-	    hm.put(18,"s");
-	    hm.put(19,"t");
-	    hm.put(20,"u");
-	    hm.put(21,"v");
-	    hm.put(22,"w");
-	    hm.put(23,"x");
-	    hm.put(24,"y");
-	    hm.put(25,"z");
-	    
-	    
-		int oddCounter = 0;
-		int i=0;
-		while (i<26){
-		  String target = hm.get(i);
-		  String after = input.replaceAll(target,"" );
-	      int charCounter = input.length() - after.length();
-	     if (charCounter%2 != 0)
-	       oddCounter = oddCounter+1;
-	     i =i+1;
-		}
-		if (oddCounter>1)
-		return false;
-		else
-	     return true;
+			int pairsOfLetters = input.length() / 2; // There should be pairs of the characters in a palindrome
+			// This list will contain the indexes of each character that has already been paired
+		    //so that there aren't pairs being counted when there shouldn't be.
+			List<Integer> list = new ArrayList<>();
+			//the for loop will iterate over each character then search if there is a pair
+			// in front of it 
+			for(int i=0; i<input.length(); i++) {
+				// This is to check if the character has already been paired and accounted for or not
+				if (!list.contains(i)) { 
+					char letter = input.charAt(i);
+					innerLoop:
+					for(int j=i+1; j<input.length(); j++) {
+						if (letter == input.charAt(j)) {
+							list.add(j);
+							pairsOfLetters --;
+							break innerLoop; // If a pair is found, the character should not keep checking for a match
+						}
+					}
+				}
+			}
+			if (pairsOfLetters == 0)
+				return true;
+			return false;
 	}
 
 

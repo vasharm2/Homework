@@ -33,25 +33,30 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		//YOUR CODE HERE
-      int height=input;
-      int l =0;
-	  while (l<= height){
-	
-		for (int j=height-l; j > 0; j--){
-			System.out.print(" ");
+		int numPoundSigns=0;
+		int numSpaces=0;
+		
+		for(int i =0;i<=input;i++)
+		{
+			numPoundSigns=i;
+			numSpaces=input-i;
+			while (numSpaces>0)
+			{
+				System.out.print(" ");//prints out spaces so the staircase ascends to the right
+				numSpaces--;
+			}
+			while(numPoundSigns>0)
+			{
+				System.out.print("#");//prints out the stair steps
+				numPoundSigns--;
+			}
+			System.out.println();
 		}
-		for (int k=l; k > 0; k--){
-         System.out.print("#");
-		}
-		 System.out.println("");
-		l = l+1;
-	  }
 	}
 
 
 	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
+		File file = new File("res/Stairs.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
