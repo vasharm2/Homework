@@ -27,6 +27,7 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 '''
 
 def stairs(input):
+    input = int(input)
     # YOUR CODE HERE
     for i in range(input):
         s=' '*(input-1-i)+'#'*(i+1)

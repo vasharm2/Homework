@@ -28,10 +28,16 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 '''
 
-def diagonal(input):
+def diagonal(matrix):
     # YOUR CODE HERE
-    
-    return 0
+    position = len(matrix[0])
+    sum_d1 = 0
+    sum_d2 = 0
+    for i in range(0,position):
+        row = matrix[i]
+        sum_d1 = sum_d1 + int(row[i])
+        sum_d2 = sum_d2 + int(row[position - i-1])
+    return sum_d1 * sum_d2
 
 try:
     with open('Diagonal.txt') as f:
