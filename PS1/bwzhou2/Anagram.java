@@ -9,37 +9,55 @@ import java.io.*;
 | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/ 
                              
+
 Problem set 1
+
+
 Question 1
+
 A common problem in computer science is finding patterns within data. 
 This problem will simulate that in a way that is easy to see what is happening.
+
 A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward.
 Allowances may be made for adjustments to capital letters, punctuation, and word dividers.
+
 an anagram is a word, phrase, or name formed by rearranging the letters of another.
+
+
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
 For example, the String â€œoatrtroâ€� will return true (rotator), while the String â€œfalseâ€� will return false.
+
+
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
+
 ************************************************
+
 */
 
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		int[] count = new int[26];
-		for(int j = 0; j < input.length(); j++) {
-			char ch = input.charAt(j);
-			count[ch-'a']++;
-		}
-		int odd = 0;
-		for(int cnt = 0; cnt < 26; cnt++) {
-			if(count[cnt] % 2 == 1)
-			odd++;
-			if(odd > 1)
-				return false;
-		}
-		return true;
+		int [] letterFrequency = new int[26];//one for every letter of alphabet
+		String word=input.toLowerCase();
+        for( int i=0;i<word.length();i++ )
+        {
+            char letter = word.charAt(i);
+            letterFrequency[letter-'a']++; //add one to position where frequency of letter is counted
+        }
+        int odd=0;
+        for(int i=0;i<letterFrequency.length;i++)
+        {
+            
+            if(letterFrequency[i]%2==1)
+                odd++;
+        }
+        if(odd>1)//if more than one odd frequency character, failure
+        return false;
+        else
+        return true;
 	}
+
 
 
 	public static void main(String[] args) {

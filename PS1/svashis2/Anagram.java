@@ -18,7 +18,7 @@ Allowances may be made for adjustments to capital letters, punctuation, and word
 an anagram is a word, phrase, or name formed by rearranging the letters of another.
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
-For example, the String â€œoatrtroâ€� will return true (rotator), while the String â€œfalseâ€� will return false.
+For example, the String �oatrtro� will return true (rotator), while the String �false� will return false.
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 */
@@ -26,20 +26,38 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		int[] count = new int[26];
-		for(int j = 0; j < input.length(); j++) {
-			char ch = input.charAt(j);
-			count[ch-'a']++;
+		//YOUR CODE HERE
+		
+	int [] count = new int [26];
+	for (int i = 0; i < input.length(); i++ ) {
+		char letter = input.charAt(i);
+		if (letter >= 'A' && letter <= 'Z') {
+			letter = (char)(letter+32);
 		}
-		int odd = 0;
-		for(int cnt = 0; cnt < 26; cnt++) {
-			if(count[cnt] % 2 == 1)
-			odd++;
-			if(odd > 1)
-				return false;
-		}
-		return true;
+			count [letter - 'a']++;
+		
 	}
+	int odd = 0;
+	for (int ctr =0; ctr <26; ctr++) {
+		int occurance = count[ctr];
+		if (occurance%2==1) {
+			odd++;
+		}
+		if (odd > 1) {
+		return false;
+		}
+	}
+	return true;
+	}
+	
+	//if (odd > 0){
+		//return false 
+				
+		
+	
+	
+	
+
 
 
 	public static void main(String[] args) {

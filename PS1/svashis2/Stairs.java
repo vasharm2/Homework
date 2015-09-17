@@ -9,40 +9,41 @@ import java.io.*;
 | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/ 
                              
-
 Problem set 1
-
-
 Question 3
-
 Given an integer input N, print a staircase out of height N. For example, given the input 4, print out the following staircase:
-
     #
    ##
   ###
  ####
 #####
-
-
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
-
 ************************************************
-
 */
 public class Stairs {
 
+
 	public static void stairs(int input) {
-		for (int i = 1; i <= input; i++) {
-			for(int j = input; j>i; j--) {
-				System.out.print(" ");
-			}
-			for(int k = 0; k<i; k++) {
-				System.out.print("#");
-			}
-		System.out.println("");
+		//YOUR CODE HERE
+		for (int i=1; i<=input; i++){
+			spaces(input-i);
+			pound(i);
+			System.out.println();
 		}
-		System.out.println("");
-		return;
+		System.out.println();
+	}
+		
+
+	public static void spaces(int num){
+		for (int i = 1; i<=num; i++){
+			System.out.print(" ");
+		}
+	}
+	
+	public static void pound(int num){
+		for (int i = 1; i<=num; i++){
+			System.out.print("#");
+		}
 	}
 
 	public static void main(String[] args) {
