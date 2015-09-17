@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 import java.io.*;
 
@@ -84,3 +85,6 @@ public class Anagram {
 		}
 	}
 }
+=======
+
+>>>>>>> 7a3a176157cfc91e9d2402bdbf5f7a7ea594755b
