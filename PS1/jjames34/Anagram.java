@@ -1,5 +1,10 @@
 import java.util.*;
 import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Collection;
+import java.util.Hashtable;
+import java.util.Scanner;
 
 /*
 ************************************************
@@ -38,15 +43,17 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		if (input.length() < 3 )
-			return true;
 		char[] temp = input.toCharArray();
 		Hashtable<Character, Integer> chars = new Hashtable<Character,Integer>();
 		int numOfOdds = 0;
+		if (input.length() < 3 )
+			return true;
+		//Puts the individual letters into the Hashtable 
 		for (int i = 0; i < temp.length; i++) { 
 			if (!chars.contains(temp[i]))
 				chars.put(temp[i], 0);
 		}
+		//Counts the number of time each letter appears in the String. 
 		for (int i = 0; i < temp.length; i++) {
 			chars.put(temp[i], chars.get(temp[i]) + 1);
 		}
