@@ -13,6 +13,7 @@
 # language ignores
 *.class
 *.pyc
+*.out
 
 # local setup
 Homework
