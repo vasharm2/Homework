@@ -1,5 +1,15 @@
-.idea
+# merge tool ignores
+.gitignore.orig
+
+# osx ignores
 .DS_Store
-*.class
+
+# ide ignores
+.idea
+.classpath
+.project
 /bin/
->>>>>>> 9526310ef9a3875b7a656165f16a5a9776c84407
+
+# language ignores
+*.class
+*.pyc
