@@ -2,8 +2,8 @@ import java.util.*;
 import java.io.*;
 
 public class Diagonal {
-	public static int diagonal(int[][] input) {
-		int d1 = 0, d2 = 0;
+	public static double diagonal(double[][] input) {
+		double d1 = 0, d2 = 0;
 		for (int i = 0, j = i; i < input.length; i++, j++){
 			d1 = d1 + input[i][j];
 		}
@@ -20,10 +20,10 @@ public class Diagonal {
 			int numberOfCases = scan.nextInt();
 			for(int i = 0; i < numberOfCases; i++) {
 				int N = scan.nextInt();
-				int[][] matrix = new int[N][N];
+				double[][] matrix = new double[N][N];
 				for(int j = 0; j < N; j++) {
 					for(int k = 0; k < N; k++) {
-						matrix[j][k] = scan.nextInt();
+						matrix[j][k] = scan.nextDouble();
 					}
 				}
 				System.out.println(diagonal(matrix));
