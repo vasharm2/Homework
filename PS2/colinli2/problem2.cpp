@@ -41,6 +41,8 @@ http://www.cplusplus.com/reference/cmath/pow/
 */
 
 #include <iostream>
+#include <math.h>
+//actually compiled without math.h, but w/e
 
 using namespace std;
 
