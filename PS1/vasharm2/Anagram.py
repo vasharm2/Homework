@@ -33,19 +33,25 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 def anagram(word):
     # YOUR CODE HERE
         count = 0
+        occurence = 0
         dictionary = {}
-for occurence in word:
-    if occurence in word:
-        dictionary[occurence] = dictionary[occurence] + 1
-    else:
-        dictionary[occurence] = 1
-for occurence in dictionary:
-    if dictionary[occurence]%2 == 1:
-        count+= 1
-    if count >1: 
-        return False
-    else:
-        return True
+        for occurence in word:
+            if occurence in dictionary.keys():
+                dictionary[occurence] = dictionary[occurence] + 1
+            else:
+                dictionary[occurence] = 1
+        for occurence in dictionary:
+           
+            print dictionary
+            if dictionary[occurence]%2 == 1:
+                count= count + 1
+                print count
+        if count >1: 
+            return False
+        else:
+                
+            return True
+                 
 
 try:
     print("Hello")
