@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 """
 ************************************************
   ____ ____    _  ___   __
@@ -25,9 +23,11 @@ def printStatement(times, foo):
     i = 0
     while i < times:
         j = 0
+        print "'",
         while j < length:
-            print(foo[j], end=' ')
+            print(foo[j]),
             j = j + 1
+        print "'",
         print('')
         i = i + 1
 

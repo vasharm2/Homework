@@ -1,5 +1,3 @@
-from __future__ import print_function
-
 """
 ************************************************
   ____ ____    _  ___   __
@@ -21,14 +19,12 @@ when correct
 """
 
 def printStatement(times, foo):
-    length = len(foo);
-    i = 0
-    while i < times:
-        j = 0
-        while j < length:
-            print(foo[j], end=' ')
-            j = j + 1
-        print('')
-        i = i + 1
+    for i in range(times):
+        output = ""
+        for j in range(len(foo)):
+            output += str(foo[j])
+            if(len(foo) - j != 1):
+                output += " " #last char, don't print space
+        print(output)
 
 printStatement(3, ['C','S','1','9','6'])
