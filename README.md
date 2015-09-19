@@ -1,5 +1,5 @@
 # Submissions
-This is where you submit your code. We understand and accept the fact that you can see everyone else's submissions. We are not going to do anything to prevent you from cheating. Keep in mind that this is an Honors course, meant for enriching your knowledge. You gain absolutely nothing from cheating. 
+This is where you submit your code. We understand and accept the fact that you can see everyone else's submissions. We are not going to do anything to prevent you from cheating. Keep in mind that this is an Honors course, meant for enriching your knowledge. You gain absolutely nothing from cheating.
 
 ##How do I set up git and submit homework assignments?
 
@@ -25,13 +25,26 @@ Submissions<br />
 │             ├── Stairs.java<br />
 │             └── Stairs.txt<br />
 └── README.md<br />
+    or, for example, if you were to do it in Python instead of Java: <br />
+Submissions<br />
+├── PS1<br />
+│   └── EXAMPLE_NETID<br />
+│             ├── Anagram.py<br />
+│             ├── Anagram.txt<br />
+│             ├── Diagonal.py<br />
+│             ├── Diagonal.txt<br />
+│             ├── PS1.txt<br />
+│             ├── Stairs.py<br />
+│             └── Stairs.txt<br />
+└── README.md<br />
+... etc
 6. Solve the problems!!!
-8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add https://github.com/[YOUR_GITHUB_USERNAME]/submissions.git origin```
+8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
 9. Following that (in the same directory), add your changes files to be staged for a commit, and commit your changes:
-```git add [FILE]```
+```git add [FILE]``` and then a 
 ```git commit -m "PSET submission"```
 10. then run ```git push origin master``` (you may need to ```git pull``` to catch up to master)
-11. On github.com/[YOUR_USERNAME]/Submissions, click the button for a new pull request (on the right sidebar) 
+11. On github.com/[YOUR_USERNAME]/Submissions, click the button for a new pull request (on the right sidebar)
 12. To the complete the new pull request: set the base fork HEAD to cs196illinois:submissions and the head fork HEAD to [yourGithubID]:master
 13. Once you are done with the pull request, PAT YOURSELF ON THE BACK!!!
 14. wait for a response (either accepting or rejecting the merge). Poke your Course Assistant if it takes more than a few hours.
@@ -39,4 +52,4 @@ Submissions<br />
 Repeat steps 10 through 15 for subsequent PSets!
 SEE EXAMPLE ENTRY IN PS1 for SUBMISSION FORMAT!!!
 
-#### WE UNDERSTAND THAT GIT IS VERY DIFFICULT TO PICK UP INITIALLY. IF YOU HAVE ANY TROUBLE OR HAVE ANY QUESTIONS, PLEASE FEEL TO CONTACT YOUR CA, COME TO HACKERSPACE, OR SEND AN EMAIL TO cs196-instructors@illinois.edu, OR FIND Aravind Sundaresan (sundrsn2@illinois.edu) OR Naren Dasan (sivagna2@illinois.edu) THROUGH WHATEVER FORMAT IS MOST CONVENIENT 
+#### WE UNDERSTAND THAT GIT IS VERY DIFFICULT TO PICK UP INITIALLY. IF YOU HAVE ANY TROUBLE OR HAVE ANY QUESTIONS, PLEASE FEEL TO CONTACT YOUR CA, COME TO HACKERSPACE, OR SEND AN EMAIL TO cs196-instructors@illinois.edu, OR FIND Aravind Sundaresan (sundrsn2@illinois.edu) OR Naren Dasan (sivagna2@illinois.edu) THROUGH WHATEVER FORMAT IS MOST CONVENIENT
