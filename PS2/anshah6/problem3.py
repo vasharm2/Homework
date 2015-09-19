@@ -5,10 +5,8 @@
 | |   \___ \  | | (_) | '_ \
 | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/
-
 Problem Set 3
 Problem 3
-
 Find the python bug!
 Should print:
 'C S 1 9 6'
@@ -17,18 +15,16 @@ Should print:
 when correct
 ************************************************
 """
-
+import sys
 def printStatement(times, foo):
     length = len(foo);
     i = 0
     while i < times:
         j = 0
-        print "'",
+        sys.stdout.write("'")
         while j < length:
             print(foo[j]),
-            j = j + 1
-        print "'",
-        print('')
-        i = i + 1
-
+            j += 1
+        i += 1
+        sys.stdout.write("'"+'\n')
 printStatement(3, ['C','S','1','9','6'])
