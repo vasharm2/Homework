@@ -36,6 +36,8 @@ On Windows:
 ************************************************
 */
 
+//jamrozy2
+
 #include <iostream>
 
 using namespace std;

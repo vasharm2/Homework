@@ -40,6 +40,8 @@ http://www.cplusplus.com/reference/cmath/pow/
 ************************************************
 */
 
+//jamrozy2
+
 #include <iostream>
 #include <math.h>
 
