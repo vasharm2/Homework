@@ -45,7 +45,7 @@ public class Anagram {
 		palindromeFound = false;
 		
 		//Start the recursive 
-		testAnagram(input, "");
+		testAnagram(input.toLowerCase(), "");
 		
 		//Return the state of the global variable, which will have been modified by testAnagram() if a palindrome
 		//was found
