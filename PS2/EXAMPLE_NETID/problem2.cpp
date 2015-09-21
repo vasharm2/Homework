@@ -7,10 +7,10 @@
  \____|____/  |_|  /_/ \___/
 
 Problem Set 2
-Problem 1
+Problem 2
 
-There are numerous syntactical errors in the code below
-If the code successfully compiles, you are done with this problem!
+This program is missing something that lets you use the pow() function.
+If the program successfully compiles, you have finished this problem!
 
 We suggest you start by compiling and looking at the errors
 
@@ -33,6 +33,10 @@ On Windows:
     and hit the play button to compile
     Or even easier do the hw on ews and follow the clang command
     for linux
+
+
+Hint- read this page:
+http://www.cplusplus.com/reference/cmath/pow/
 ************************************************
 */
 
@@ -40,17 +44,10 @@ On Windows:
 
 using namespace std;
 
-void printSecondary() {
-    cout << "... but maybe I will make a better one one day?" << endl;
-}
-
 int main() {
-    for (int i = 0; i < 10; i++) {
-        cout << "I wish I had " << i << " startups." << endl;
-
-        if (i == 3) {
-            cout << "I hate my startup." << endl;
-            printSecondary();
+    for (int i = 0; i < 3; i++) {
+        for (int j = 3; j > 0; j--) {
+            cout << pow(i, j) << endl;
         }
-}
+    }
 }
