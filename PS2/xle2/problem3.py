@@ -20,13 +20,16 @@ when correct
 
 def printStatement(times, foo):
     length = len(foo);
-    i = 1
+    i = 0
     while i < times:
         j = 0
-        while j <= length:
-            print(foo[j]),
-        j = j + 1
-        print('')
-    i = i + 1
+        print("'", end = "")
+        while j < length:
+            if j != 0:
+                print(" ", end = "")
+            print(foo[j], end = "")
+            j = j + 1
+        print("'")
+        i = i + 1
 
 printStatement(3, ['C','S','1','9','6'])
