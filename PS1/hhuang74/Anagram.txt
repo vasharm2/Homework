@@ -1,6 +1,0 @@
-5
-aabb
-abbA
-xyyxy
-axsx
-AsBsb
