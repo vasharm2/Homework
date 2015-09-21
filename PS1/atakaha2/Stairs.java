@@ -34,7 +34,19 @@ public class Stairs {
 
 	public static void stairs(int input) {
 		//YOUR CODE HERE
-		return;
+      int height=input;
+      int l =0;
+	  while (l<= height){
+	
+		for (int j=height-l; j > 0; j--){
+			System.out.print(" ");
+		}
+		for (int k=l; k > 0; k--){
+         System.out.print("#");
+		}
+		 System.out.println("");
+		l = l+1;
+	  }
 	}
 
 
