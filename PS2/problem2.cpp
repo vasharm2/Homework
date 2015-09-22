@@ -51,8 +51,4 @@ int main() {
             cout << pow(i, j) << endl;
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e479c1d280440c4a82537a32aa139c44eea00813

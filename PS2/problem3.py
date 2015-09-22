@@ -19,17 +19,6 @@ when correct
 """
 
 def printStatement(times, foo):
-<<<<<<< HEAD
-    i=0
-    while(i < times):
-        j = 0
-        while(j < len(foo)):
-            print(foo[j]),
-            j = j + 1
-        print("\n"),
-        i = i + 1
-printStatement(3, ['C','S','1','9','6'])
-=======
     length = len(foo);
     output = "'"
     for ii in range(0, length):
@@ -43,4 +32,3 @@ printStatement(3, ['C','S','1','9','6'])
     	i += 1
 
 printStatement(3, ['C','S','1','9','6'])
->>>>>>> e479c1d280440c4a82537a32aa139c44eea00813
