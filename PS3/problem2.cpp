@@ -18,6 +18,7 @@ using namespace std;
 * Identify the reasons why the code below is printing the wrong output
 * Devise an addition to the existing code to fix the problem
 * (no deleting any of the current code!)
+* Correct Output: "This is the correct output!"
 * DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
 * you want to make setString do what it is intended to do.
 */	
