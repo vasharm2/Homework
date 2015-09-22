@@ -54,7 +54,6 @@ class Problem4 {
     public static void printThirdSentence() {
         for(int amount = 0; amount < 4; amount++) {
             System.out.println("This sentence should print 4 times.");
-            
         }
     }
 }
