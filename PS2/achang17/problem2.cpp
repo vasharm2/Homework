@@ -3,7 +3,7 @@
 //  PS2problem1
 //
 //  Created by Angela Chang on 9/21/15.
-//  Copyright © 2015 Angela Chang. All rights reserved.
+//  Copyright © 2015 University of Illinois. All rights reserved.
 //
 
 
