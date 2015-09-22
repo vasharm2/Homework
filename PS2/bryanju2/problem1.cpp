@@ -28,7 +28,6 @@ On Windows:
     for linux
 ************************************************
 */
-
 #include <iostream>
 
 using namespace std;
