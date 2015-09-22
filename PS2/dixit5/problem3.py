@@ -24,7 +24,12 @@ def printStatement(times, foo):
     while i <= times:
         j = 0
         while j < length:
-            print(foo[j]),
+            if j==0:
+            	print('\''+foo[j]),
+            elif j==4:
+            	print(foo[j]+'\'')
+            else:
+            	print(foo[j]),
             j = j + 1
         print('')
         i = i + 1
