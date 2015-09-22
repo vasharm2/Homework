@@ -60,7 +60,11 @@ class Problem4 {
 
     public static void printThirdSentence() {
         for(int amount = 0; amount < 4; amount++) {
+<<<<<<< HEAD
             System.out.println("This sentence should print 4 times.")
+=======
+            System.out.println("This sentence should print 4 times.");
+>>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
         }
     }
 }

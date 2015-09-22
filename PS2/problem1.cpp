@@ -50,7 +50,14 @@ int main() {
 
         if (i == 3) {
             cout << "I hate my startup." << endl;
+<<<<<<< HEAD
             printSecondary;
         }
       }
 }
+=======
+            printSecondary();
+        }
+    }
+}
+>>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
