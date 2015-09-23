@@ -37,11 +37,15 @@ On Windows:
 */
 
 #include <iostream>
+<<<<<<< HEAD
 #include <string>
+=======
+>>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
 
 using namespace std;
 
 void printSecondary() {
+<<<<<<< HEAD
     cout << "... but maybe I will make a better one one day?";
 }
 
@@ -57,3 +61,25 @@ int main()
     }
     return 0;
 }
+=======
+    cout << "... but maybe I will make a better one one day?" << endl;
+}
+
+int main() {
+    for (int i = 0; i < 10; i++) {
+        cout << "I wish I had " << i << " startups." << endl;
+
+        if (i == 3) {
+            cout << "I hate my startup." << endl;
+<<<<<<< HEAD
+            printSecondary;
+        }
+      }
+}
+=======
+            printSecondary();
+        }
+    }
+}
+>>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
+>>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
