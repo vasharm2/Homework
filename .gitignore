@@ -1,5 +1,19 @@
+# merge tool ignores
+.gitignore.orig
+
+# osx ignores
 .DS_Store
-<<<<<<< HEAD
-=======
+
+# ide ignores
+.idea
+.classpath
+.project
+/bin/
+
+# language ignores
 *.class
->>>>>>> 9526310ef9a3875b7a656165f16a5a9776c84407
+*.pyc
+*.out
+
+# local setup
+Homework
