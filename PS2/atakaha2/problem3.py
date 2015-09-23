@@ -19,14 +19,17 @@ when correct
 """
 
 def printStatement(times, foo):
-    length = len(foo);
-    i = 1
+  length = len(foo)
+    i = 0
     while i < times:
-        j = 0
+        j = 1
+        print ''\'"
         while j <= length:
-            print(foo[j]),
+            print(foo[j-1]),
+            print(' '),
         j = j + 1
-        print('')
+        print ''\'"
     i = i + 1
+
 
 printStatement(3, ['C','S','1','9','6'])
