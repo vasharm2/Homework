@@ -17,6 +17,8 @@ using namespace std;
 * There are issues in this code
 * Identify the reasons why the code below is printing the wrong output
 * Fix the code to print the correct output!
+* correct output:"This is the first part, this is the second part, and this is the third part"
+*		 "this is the correct output!"
 * Do not simply reassign variables and delete the lines of code!!!
 * reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
