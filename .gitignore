@@ -1,4 +1,27 @@
+<<<<<<< HEAD
 .DS_Store
+<<<<<<< HEAD
+=======
 *.class
-/bin/
 >>>>>>> 9526310ef9a3875b7a656165f16a5a9776c84407
+=======
+# merge tool ignores
+.gitignore.orig
+
+# osx ignores
+.DS_Store
+
+# ide ignores
+.idea
+.classpath
+.project
+/bin/
+
+# language ignores
+*.class
+*.pyc
+*.out
+
+# local setup
+Homework
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
