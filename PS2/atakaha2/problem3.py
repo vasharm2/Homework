@@ -23,12 +23,12 @@ def printStatement(times, foo):
     i = 0
     while i < times:
         j = 1
-        print ''\'"
+        print "\'"
         while j <= length:
             print(foo[j-1]),
             print(' '),
         j = j + 1
-        print ''\'"
+        print "\'"
     i = i + 1
 
 
