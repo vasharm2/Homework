@@ -23,7 +23,7 @@ On Mac or Linux:
 
     if neither works:
     On Mac make sure you install xcode (Mac App Store)
-    and install the developer t xools
+    and install the developer tools
 
     On linux run [your package manager] install clang
     i.e sudo apt-get install clang
@@ -47,10 +47,14 @@ void printSecondary() {
 int main() {
     for (int i = 0; i < 10; i++) {
         cout << "I wish I had " << i << " startups." << endl;
-        
+
         if (i == 3) {
             cout << "I hate my startup." << endl;
             printSecondary();
+            
+            
         }
-    }
+        
+        return 0;
+}
 }
