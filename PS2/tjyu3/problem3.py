@@ -28,5 +28,4 @@ def printStatement(times, foo):
             j = j + 1
         print('')
         i = i + 1
-
 printStatement(3, ['C','S','1','9','6'])
