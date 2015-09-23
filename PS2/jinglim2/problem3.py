@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+from __future__ import print_function
+
+>>>>>>> a8f2a634af4002ee8090e4aeab5e791433b1527a
 """
 ************************************************
   ____ ____    _  ___   __
@@ -24,7 +29,11 @@ def printStatement(times, foo):
     while i < times:
         j = 0
         while j < length:
+<<<<<<< HEAD
             print(foo[j]),
+=======
+            print(foo[j], end=' ')
+>>>>>>> a8f2a634af4002ee8090e4aeab5e791433b1527a
             j = j + 1
         print('')
         i = i + 1
