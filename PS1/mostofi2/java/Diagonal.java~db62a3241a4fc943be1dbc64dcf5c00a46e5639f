@@ -13,56 +13,51 @@ import java.io.*;
 Problem set 1
 
 
-Question 3
+Question 2
 
-Given an integer input N, print a staircase out of height N. For example, given the input 4, print out the following staircase:
+Given a square matrix size N x N, calculate the product of the sums across the two main diagonals.
+For example, given the input:
 
-    #
-   ##
-  ###
- ####
-#####
+3
 
+4	5	7
+3	1	5
+9	3	2
+
+Return: (4+1+2)*(9+1+7) = 119
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 ************************************************
 
 */
-public class Stairs {
+public class Diagonal {
 
-
-	public static void stairs(int input) {
+	public static int diagonal(int[][] input) {
 		//YOUR CODE HERE
-<<<<<<< HEAD
-		return;
-=======
-      int height=input;
-      int l =0;
-	  while (l<= height){
-	
-		for (int j=height-l; j > 0; j--){
-			System.out.print(" ");
-		}
-		for (int k=l; k > 0; k--){
-         System.out.print("#");
-		}
-		 System.out.println("");
-		l = l+1;
-	  }
->>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
+		return 0;
 	}
 
 
+
+
+
 	public static void main(String[] args) {
-		File file = new File("Stairs.txt");
+		File file = new File("Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
 			for(int i = 0; i < numberOfCases; i++) {
-				int height = scan.nextInt();
-				stairs(height);
+				int N = scan.nextInt();
+				int[][] matrix = new int[N][N];
+				for(int j = 0; j < N; j++) {
+					for(int k = 0; k < N; k++) {
+						matrix[j][k] = scan.nextInt();
+					}
+				}
+				System.out.println(diagonal(matrix));
 			}
+			scan.close();
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();

@@ -41,7 +41,7 @@ http://www.cplusplus.com/reference/cmath/pow/
 */
 
 #include <iostream>
-#include <tgmath.h>
+#include <math.h> 
 
 using namespace std;
 

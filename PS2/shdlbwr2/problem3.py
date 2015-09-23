@@ -20,12 +20,12 @@ when correct
 
 def printStatement(times, foo):
     length = len(foo);
-    i = 0
-    while i < times:
+    i = 1
+    while i <= times:
         j = 0
-        while j < length:
+        while j <= length-1:
             print(foo[j]),
-            j += 1
+            j = j + 1
         print('')
         i = i + 1
 

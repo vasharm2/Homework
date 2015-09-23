@@ -37,8 +37,8 @@ This sentence should print 4 times.
 ************************************************
 */
 
-class Problem4 {
-    public static void main(String[] args) {
+public class Problem4 {
+	public static void main(String[] args) {
         printFirstSentence();
         printSecondSentence();
         printThirdSentence();
@@ -61,6 +61,8 @@ class Problem4 {
     public static void printThirdSentence() {
         for(int amount = 0; amount < 4; amount++) {
             System.out.println("This sentence should print 4 times.");
+            //amount--;
         }
     }
 }
+
