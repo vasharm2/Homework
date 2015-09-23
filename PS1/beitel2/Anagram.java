@@ -42,7 +42,7 @@ public class Anagram {
 		int allowedSingles = input.length%2;
 		for(int i=0;i<input.length;i++) {
 			if (input[i] == '*') {
-				break;
+				//break;
 			}
 			//find the next instance
 			for(int j=i+1; j<input.length; j++) {
@@ -58,6 +58,7 @@ public class Anagram {
 				allowedSingles=allowedSingles-1;
 			}
 		}
+		System.out.print(input);
 		return allowedSingles>=0;
 }
 
