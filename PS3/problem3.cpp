@@ -19,6 +19,7 @@ using namespace std;
 * Devise an addition to the existing code to fix the problem
 * (no deleting any of the current code!)
 * DO NOT SIMPLY ASSIGN POINTER1 AND POINTER2 TO THE CORRECT VALUES
+* reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
 
 

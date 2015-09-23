@@ -18,6 +18,7 @@ using namespace std;
 * Identify the reasons why the code below is printing the wrong output
 * Fix the code to print the correct output!
 * Do not simply reassign variables and delete the lines of code!!!
+* reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
 
 

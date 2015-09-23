@@ -20,6 +20,7 @@ using namespace std;
 * (no deleting any of the current code!)
 * DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
 * you want to make setString do what it is intended to do.
+* reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
