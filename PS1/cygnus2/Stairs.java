@@ -49,6 +49,7 @@ public class Stairs {
       frontSpaces--;
     }
   }
+  System.out.println();
   return;
  }
 
