@@ -2,72 +2,65 @@ import java.util.*;
 import java.io.*;
 
 /*
-************************************************
-  ____ ____    _  ___   __   
+ ************************************************
+ ____ ____    _  ___   __   
  / ___/ ___|  / |/ _ \ / /_  
-| |   \___ \  | | (_) | '_ \ 
-| |___ ___) | | |\__, | (_) |
+ | |   \___ \  | | (_) | '_ \ 
+ | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/ 
-                             
-
-Problem set 1
 
 
-Question 2
+ Problem set 1
 
-Given a square matrix size N x N, calculate the product of the sums across the two main diagonals.
-For example, given the input:
 
-3
+ Question 2
 
-4	5	7
-3	1	5
-9	3	2
+ Given a square matrix size N x N, calculate the product of the sums across the two main diagonals.
+ For example, given the input:
 
-Return: (4+1+2)*(9+1+7) = 119
+ 3
 
-PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
+ 4	5	7
+ 3	1	5
+ 9	3	2
 
-************************************************
+ Return: (4+1+2)*(9+1+7) = 119
 
-*/
+ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
+
+ ************************************************
+
+ */
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-		// create two placeholder variables to store the sum of the main diagonal (i,i)
-		// and the other diagonal (i, N-i), then multiply them.
-		int mainDiagonalSum = 0;
-		int otherDiagonalSum = 0;
-		for(int i = 0; i < input.length; i++){
-			mainDiagonalSum += input[i][i];
-			otherDiagonalSum += input[i][input.length-1-i];
+		int firstDiag = 0;
+		int secondDiag = 0;
+		for (int x = 0; x < input.length; x++) {
+			firstDiag = input[x][x];
+			secondDiag = input[x][input.length -x-1];
 		}
-		return mainDiagonalSum*otherDiagonalSum;
-		return 0;
+		return firstDiag * secondDiag;
+
 	}
-
-
-
-
 
 	public static void main(String[] args) {
 		File file = new File("Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);
 			int numberOfCases = scan.nextInt();
-			for(int i = 0; i < numberOfCases; i++) {
+			for (int i = 0; i < numberOfCases; i++) {
 				int N = scan.nextInt();
 				int[][] matrix = new int[N][N];
-				for(int j = 0; j < N; j++) {
-					for(int k = 0; k < N; k++) {
+				for (int j = 0; j < N; j++) {
+					for (int k = 0; k < N; k++) {
 						matrix[j][k] = scan.nextInt();
 					}
 				}
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
-		}
-		catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
