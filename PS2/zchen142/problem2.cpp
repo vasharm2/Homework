@@ -3,7 +3,6 @@
   Copyright (c) 2015 Daniel. All rights reserved.
 
 
-
 #include <iostream>
 #include <cmath>
 
