@@ -39,6 +39,10 @@ Submissions<br />
 └── README.md<br />
 ... etc
 6. Solve the problems!!!
+<<<<<<< HEAD
+8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
+=======
+>>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
 9. Following that (in the same directory), add your changes files to be staged for a commit, and commit your changes:
 ```git add [FILE]``` and then a 
 ```git commit -m "PSET submission"```
