@@ -26,9 +26,13 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 ************************************************
 '''
 
-def stairs(input):
+def stairs(levels):
     # YOUR CODE HERE
-    pass;
+  for i in xrange(int(levels)):
+      print " "*(int(levels)-i-1) + "#"*(i+1)
+
+
+
 
 try:
     with open('Stairs.txt', 'r') as f:
