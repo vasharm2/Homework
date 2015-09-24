@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+/Users/jonathanreynolds/Documents/GitHub/Submissions/.metadata/.plugins/org.eclipse.jdt.core
-1690955386.index
-1300787366.index
