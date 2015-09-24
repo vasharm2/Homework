@@ -41,7 +41,11 @@ On Windows:
 using namespace std;
 
 void printSecondary() {
+<<<<<<< HEAD
     cout << "... but maybe I will make a better one one day?" << endl
+=======
+    cout << "... but maybe I will make a better one one day?" << endl;
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
 }
 
 int main() {
@@ -50,6 +54,13 @@ int main() {
 
         if (i == 3) {
             cout << "I hate my startup." << endl;
+<<<<<<< HEAD
             PrintSecondary;
         }
 }
+=======
+            printSecondary();
+        }
+}
+}
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee

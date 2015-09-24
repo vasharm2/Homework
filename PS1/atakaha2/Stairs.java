@@ -34,6 +34,9 @@ public class Stairs {
 
 	public static void stairs(int input) {
 		//YOUR CODE HERE
+<<<<<<< HEAD
+		return;
+=======
       int height=input;
       int l =0;
 	  while (l<= height){
@@ -47,6 +50,7 @@ public class Stairs {
 		 System.out.println("");
 		l = l+1;
 	  }
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 	}
 
 
