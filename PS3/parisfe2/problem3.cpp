@@ -44,12 +44,25 @@ int main() {
 	* you want to make setString do what it is intended to do.
 	*/
 
-
+	//cout << address2 + " " + address3 << endl;
+	
 	swap(address2, address3);
+	
+	//cout << address2 + " " + address3 << endl;
+	
+	// at this point address2 = "correct...", address3 = "incorrect..."
+	// but the address of the pointers are unchanged, and we print from the pointers
+	
 	pointer3 = pointer2;
-	*pointer2 = address3;
+	//*pointer2 = address3;	// this actually changes the VALUE that pointer2 was pointing to, in this case address2, to "incorrect..." . This means that BOTH address2 and address3 = "incorrect..."
+	pointer2 = &address3;
 
-
+	//cout << address2 + " " + address3 << endl;
+	
+	// now we swapped the pointers, but ofcourse since we changed the values we're back to where we started
+	// so swap the values of the pointers (ie the addresses they point to) with each other
+	
+	swap(pointer2, pointer3);
 
 
 
