@@ -38,6 +38,12 @@ public class Diagonal {
 		int sumRight = 0;
 		int sumLeft = 0;
 		int shift = input.length - 1;
+<<<<<<< HEAD
+		for(int i = 0; i < input.length; i++) {
+			sumRight += input[i][i];
+			sumLeft += input[i][shift - i];
+		}
+=======
 		String string1 = "";
 		String string2 = "";
 		for(int i = 0; i < input.length; i++) {
@@ -50,6 +56,7 @@ public class Diagonal {
 		string2 = string2.substring(0, string2.length() - 3);
 		System.out.println("Print the product of the sums of the diagonals ((" + string1 + ") + (" + string2+ "))");
 		
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 		return sumRight * sumLeft;
 	}
 
@@ -70,7 +77,10 @@ public class Diagonal {
 						matrix[j][k] = scan.nextInt();
 					}
 				}
+<<<<<<< HEAD
+=======
 				
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
