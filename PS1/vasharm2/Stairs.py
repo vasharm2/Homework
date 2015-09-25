@@ -27,7 +27,10 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 '''
 
 def stairs(input):
+<<<<<<< HEAD
+=======
     input = int(input)
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
     # YOUR CODE HERE
     for i in range(input):
         s=' '*(input-1-i)+'#'*(i+1)
