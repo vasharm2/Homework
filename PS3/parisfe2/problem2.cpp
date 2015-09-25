@@ -28,7 +28,7 @@ using namespace std;
 void setString(string& address2, string& address3) {
 	address2 = address3;
 	// &address2 = &address3;
-	// ^^ isn't assignable, BUT if its our parametre then C++ doesn't care lol
+	// ^^ isn't assignable, BUT if its our parametre then C++ doesn't care lol (paramatre >> paramater)
 	return;
 }
 

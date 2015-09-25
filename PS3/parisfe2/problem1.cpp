@@ -32,15 +32,15 @@ int main() {
 	string temp2 = "and this is the third part";
 	string* str3 = &temp2;
 
+	// fixed stuff above so it actually compiles
 
 
 
+	
 
 
 
-
-
-
+	// add some *'s around
 
 	string str6 = str1 + *str2 + *str3;
 	if(str6.compare("This is the first part, this is the second part, and this is the third part") == 0) cout << str6 << endl << "this is the correct output!" << endl;

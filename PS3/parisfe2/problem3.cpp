@@ -59,8 +59,8 @@ int main() {
 
 	//cout << address2 + " " + address3 << endl;
 	
-	// now we swapped the pointers, but ofcourse since we changed the values we're back to where we started
-	// so swap the values of the pointers (ie the addresses they point to) with each other
+	// now we swapped the pointers, but ofcourse since we swapped the values we're back to where we started
+	// so swap the values of the pointers (ie the addresses they point to) with each other (swapping the addresses would probably work too but seems to be against the point of the assignment?)
 	
 	swap(pointer2, pointer3);
 
