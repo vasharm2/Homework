@@ -1,3 +1,16 @@
+# Homework
+Homework for students
+
+You can do the Problem Sets in whatever language you wish. Templates will be provided for Java, C++, and Python! (WIP, coming soon)
+
+### Make sure you follow the submission instructions located [here](https://github.com/CS196Illinois/Submissions/blob/master/README.md)
+
+If you've already cloned this repository locally and want to update the repository to get new code from this repository, run the command:
+
+`git pull`
+
+to pull in the latest files.
+=======
 # Submissions
 This is where you submit your code. We understand and accept the fact that you can see everyone else's submissions. We are not going to do anything to prevent you from cheating. Keep in mind that this is an Honors course, meant for enriching your knowledge. You gain absolutely nothing from cheating.
 
@@ -39,16 +52,21 @@ Submissions<br />
 └── README.md<br />
 ... etc
 6. Solve the problems!!!
+<<<<<<< HEAD
 8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
+=======
+<<<<<<< HEAD
+8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
+=======
 9. Following that (in the same directory), add your changes files to be staged for a commit, and commit your changes:
-```git add [FILE]```
+```git add [FILE]``` and then a 
 ```git commit -m "PSET submission"```
 10. then run ```git push origin master``` (you may need to ```git pull``` to catch up to master)
 11. On github.com/[YOUR_USERNAME]/Submissions, click the button for a new pull request (on the right sidebar)
 12. To the complete the new pull request: set the base fork HEAD to cs196illinois:submissions and the head fork HEAD to [yourGithubID]:master
 13. Once you are done with the pull request, PAT YOURSELF ON THE BACK!!!
 14. wait for a response (either accepting or rejecting the merge). Poke your Course Assistant if it takes more than a few hours.
-
+15. When you want to start working on the next assignment, run the following: ```git remote add upstream https://github.com/CS196Illinois/submissions```. This sets another remote called upstream. for you to push to and pull from. You can then pull any changes from our repository into yours with the command ```git pull upstream submission```. 
 Repeat steps 10 through 15 for subsequent PSets!
 SEE EXAMPLE ENTRY IN PS1 for SUBMISSION FORMAT!!!
 
