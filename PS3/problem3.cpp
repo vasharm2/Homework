@@ -3,13 +3,6 @@
 
 using namespace std;
 
-void setString(string &address2, string &address3) {
-	address2 = address3;
-	return;
-}
-
-
-
 int main() {
 	//variable declarations
 	string address1("This is the ");
@@ -18,8 +11,13 @@ int main() {
 	string *pointer1 = &address1;
 	string *pointer2 = &address2;
 	string *pointer3 = &address3;
-	setString(address2, address3); //See line 23
-	cout << address1 + address2 << endl;
+
+	swap(address2, address3);
+	pointer3 = pointer2;
+	*pointer2 = address2;
+
+	cout << *pointer1 + *pointer2 << endl;
 
 	return 0;
 }
+
