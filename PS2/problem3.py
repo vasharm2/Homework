@@ -20,6 +20,18 @@ when correct
 
 def printStatement(times, foo):
     length = len(foo);
+<<<<<<< HEAD
+    output = "'"
+    for ii in range(0, length):
+    	output += foo[ii]
+    	if ii < length-1:
+    		output += ' '
+    output += "'"
+    i = 0
+    while i < times:
+    	print(output)
+    	i += 1
+=======
     i = 0
     while i < times:
         j = 0
@@ -29,5 +41,6 @@ def printStatement(times, foo):
             j = j + 1
         print("\b'"),
         i += 1
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
 
 printStatement(3, ['C','S','1','9','6'])
