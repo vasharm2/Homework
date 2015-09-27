@@ -31,15 +31,9 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 */
 public class Stairs {
 
+
 	public static void stairs(int input) {
-		for (int i = 1; i <= input; i++)
-		{
-			for (int j = 0; j < input - i; j++)
-				System.out.print(" ");
-			for (int k = 0; k < i; k++)
-				System.out.print("#");
-			System.out.println();
-		}
+		//YOUR CODE HERE
 		return;
 	}
 

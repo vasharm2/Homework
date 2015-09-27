@@ -38,15 +38,8 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Anagram {
 
 	public static boolean anagram(String input) {
-		String str = input.toLowerCase();
-		char[] count = new char[256];
-		for (int i = 0; i < str.length(); i++)
-			count[str.charAt(i)]++;
-		int oddCounter = 0;
-		for (int j = 0; j < 256; j++)
-			if (count[j] % 2 != 0)
-				oddCounter++;
-		return oddCounter <= 1;
+		//YOUR CODE HERE
+		return false;
 	}
 
 

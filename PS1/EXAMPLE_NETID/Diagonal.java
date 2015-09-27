@@ -3,12 +3,12 @@ import java.io.*;
 
 /*
 ************************************************
-  ____ ____    _  ___   __
- / ___/ ___|  / |/ _ \ / /_
-| |   \___ \  | | (_) | '_ \
+  ____ ____    _  ___   __   
+ / ___/ ___|  / |/ _ \ / /_  
+| |   \___ \  | | (_) | '_ \ 
 | |___ ___) | | |\__, | (_) |
- \____|____/  |_|  /_/ \___/
-
+ \____|____/  |_|  /_/ \___/ 
+                             
 
 Problem set 1
 
@@ -34,23 +34,15 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 public class Diagonal {
 
 	public static int diagonal(int[][] input) {
-
-    //Initialising variables
-    int sumOfFirstDiag = 0;
-    int sumOfSecondDiag = 0;
-    int length = input.length;
-
-    //Calculating sum of the diagonals
-    for(int i = 0; i < length; i++)
-    {
-      sumOfFirstDiag += input[i][i];                //Indices of first diagonal are always equal
-			sumOfSecondDiag += input[i][length - 1 - i];  //Sum of indices of second diagonal = (size of matrix - 1)
-
-    }
-		return sumOfSecondDiag * sumOfFirstDiag;
+		//YOUR CODE HERE
+		return 0;
 	}
 
-  public static void main(String[] args) {
+
+
+
+
+	public static void main(String[] args) {
 		File file = new File("Diagonal.txt");
 		try {
 			Scanner scan = new Scanner(file);

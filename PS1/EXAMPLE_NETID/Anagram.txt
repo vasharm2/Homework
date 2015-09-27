@@ -1,6 +1,5 @@
-5
+4
 aabb
 abba
 xyyxy
 axsx
-rubbur
