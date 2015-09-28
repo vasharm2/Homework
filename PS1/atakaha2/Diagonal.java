@@ -35,6 +35,10 @@ public class Diagonal {
 
 	public static int diagonal(int[][] input) {
 		//YOUR CODE HERE
+<<<<<<< HEAD
+		i
+		return 0;
+=======
 		int sum1 = 0;
 		int sum2 = 0;
 		int N = input.length;
@@ -46,6 +50,7 @@ public class Diagonal {
 			
 		}
 		return sum1*sum2;
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 	}
 
 
@@ -68,8 +73,12 @@ public class Diagonal {
 				System.out.println(diagonal(matrix));
 			}
 			scan.close();
+<<<<<<< HEAD
+		}
+=======
 
 			}
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
