@@ -31,5 +31,9 @@ def printStatement(times, foo):
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
 printStatement(3, ['C','S','1','9','6'])

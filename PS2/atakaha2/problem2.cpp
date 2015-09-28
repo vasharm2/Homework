@@ -41,14 +41,25 @@ http://www.cplusplus.com/reference/cmath/pow/
 */
 
 #include <iostream>
+<<<<<<< HEAD
+
+using namespace std;
+
+int main() {
+    for (int i = 0; i < 3; i++) {
+=======
 #include <math.h>
 using namespace std;
 
 int main() {
     for (int i = 1; i < 3; i++) {
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
         for (int j = 3; j > 0; j--) {
             cout << pow(i, j) << endl;
         }
     }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
