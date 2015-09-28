@@ -37,23 +37,25 @@ On Windows:
 */
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 void printSecondary() {
-    cout << "... but maybe I will make a better one one day?";
+    cout << "... but maybe I will make a better one one day?" << endl;
 }
 
-int main()
-{
+int main() {
     for (int i = 0; i < 10; i++) {
-        cout << "I wish I had " << i << " startups.";
+        cout << "I wish I had " << i << " startups." << endl;
 
         if (i == 3) {
-            cout << "I hate my startup.";
+            cout << "I hate my startup." << endl;
             printSecondary();
         }
     }
-    return 0;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
