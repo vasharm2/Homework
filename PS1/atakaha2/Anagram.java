@@ -26,7 +26,11 @@ an anagram is a word, phrase, or name formed by rearranging the letters of anoth
 
 Given a String S, determine if it is an anagram of a palindrome. 
 Return true if the String is an anagram of a palindrome, and false otherwise. 
+<<<<<<< HEAD
+For example, the String "tatrtro" will return true(rotator), while the String "false" will return false.
+=======
 For example, the String "rtatoro" returns true(rotator), while the String "false" returns false.
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 
 
 PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
@@ -35,12 +39,31 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 */
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 public class Anagram {
 
 	public static boolean anagram(String input) {
 		//YOUR CODE HERE
 		input = input.toLowerCase();
 		//delete space, punctuations
+<<<<<<< HEAD
+		Char[] array = new Char[]{"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+		for (int i=0; i <26; i++){
+		  char target = array[i];
+		  String after = input.replace(target,"" )
+	      int charCounter = input.length() - after.length();
+	     if (charCounter%2 == 0)
+	    	 return;
+	     else
+	       int oddCounter = oddCounter+1
+		   return;
+		}
+		if (oddCounter>2)
+		return false;
+=======
 	    HashMap<Integer,String> hm= new HashMap<Integer,String>();
 	    hm.put(0,"a");
 	    hm.put(1, "b");
@@ -84,6 +107,7 @@ public class Anagram {
 		return false;
 		else
 	     return true;
+>>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 	}
 
 
