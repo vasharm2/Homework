@@ -4,6 +4,7 @@
 using namespace std;
 
 
+<<<<<<< HEAD
 /*
 *
 *  ____ ____    _  ___   __   
@@ -26,10 +27,14 @@ using namespace std;
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
 void setString(string address2, string address3) {
+=======
+void setString(string &address2, string &address3) {
+>>>>>>> 0e94815cfca1b2192e6317e79a33b37afdef9fdc
 	address2 = address3;
 	return;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -40,6 +45,8 @@ void setString(string address2, string address3) {
 
 
 
+=======
+>>>>>>> 0e94815cfca1b2192e6317e79a33b37afdef9fdc
 int main() {
 	//variable declarations
 	string address1("This is the ");
@@ -52,4 +59,8 @@ int main() {
 	cout << address1 + address2 << endl;
 
 	return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0e94815cfca1b2192e6317e79a33b37afdef9fdc

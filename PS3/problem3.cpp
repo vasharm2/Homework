@@ -3,6 +3,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 
 /*
 *
@@ -24,6 +25,8 @@ using namespace std;
 */	
 
 
+=======
+>>>>>>> 0e94815cfca1b2192e6317e79a33b37afdef9fdc
 int main() {
 	//variable declarations
 	string address1("This is the ");
@@ -33,6 +36,7 @@ int main() {
 	string *pointer2 = &address2;
 	string *pointer3 = &address3;
 
+<<<<<<< HEAD
 	/*
 	*
 	*
@@ -55,8 +59,17 @@ int main() {
 
 
 
+=======
+	swap(address2, address3);
+	pointer3 = pointer2;
+	*pointer2 = address2;
+>>>>>>> 0e94815cfca1b2192e6317e79a33b37afdef9fdc
 
 	cout << *pointer1 + *pointer2 << endl;
 
 	return 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e94815cfca1b2192e6317e79a33b37afdef9fdc
