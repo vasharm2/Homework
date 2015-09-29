@@ -45,31 +45,37 @@ class Problem4 {
     }
 
     public static void printFirstSentence() {
+<<<<<<< HEAD
         for(int i = 5; i > 0; i--) {
+=======
+        for(int i = 0; i < 5; i++) {
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
             System.out.println("This sentence should print 5 times.");
         }
     }
 
     public static void printSecondSentence() {
+<<<<<<< HEAD
         int i = 3;
         while(i > 0) {
             System.out.println("This sentence should print 3 times.");
             i--;
+=======
+        int i = 0;
+        while(i < 3) {
+            System.out.println("This sentence should print 3 times.");
+            i++;
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
         }
     }
 
     public static void printThirdSentence() {
-<<<<<<< HEAD
-        for(int amount = 0; amount < 12; amount += 3) {
-            System.out.println("This sentence should print 4 times.");
-=======
         for(int amount = 0; amount < 4; amount++) {
-<<<<<<< HEAD
-            System.out.println("This sentence should print 4 times.")
-=======
             System.out.println("This sentence should print 4 times.");
->>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
