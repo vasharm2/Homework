@@ -25,8 +25,12 @@ using namespace std;
 */	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
-void setString(string address2, string address3) {
-	address2 = address3;
+void setString(string* address2, string* address3) {
+	string* otherPointer1;
+	string* otherPointer2;
+	otherPointer1 = address2;
+	otherPointer2 = address3;
+	*otherPointer1 = *otherPointer2;
 	return;
 }
 
@@ -48,7 +52,7 @@ int main() {
 	string *pointer1 = &address1;
 	string *pointer2 = &address2;
 	string *pointer3 = &address3;
-	setString(address2, address3); //See line 23
+	setString(pointer2, pointer3); //See line 23
 	cout << address1 + address2 << endl;
 
 	return 0;

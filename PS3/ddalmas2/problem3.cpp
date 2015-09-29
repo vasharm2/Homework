@@ -47,9 +47,8 @@ int main() {
 
 	swap(address2, address3);
 	pointer3 = pointer2;
+	address3 = address2;
 	*pointer2 = address3;
-
-
 
 
 

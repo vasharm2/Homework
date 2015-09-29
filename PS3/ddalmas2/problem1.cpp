@@ -25,11 +25,11 @@ using namespace std;
 
 
 int main() {
-	variable declarations
-	string *str1 = "This is the first part, ";
+	//variable declarations
+	string str1 = "This is the first part, ";
 	string temp = "this is the second part, ";
-	string *str2 = temp;
-	string *temp2 = "and this is the third part";
+	string str2 = temp;
+	string temp2 = "and this is the third part";
 	string str3 = temp2;
 
 
