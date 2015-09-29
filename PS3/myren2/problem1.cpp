@@ -3,7 +3,18 @@
 
 using namespace std;
 
-/* There are issues in this code
+
+/*
+*
+*  ____ ____    _  ___   __   
+* / ___/ ___|  / |/ _ \ / /_  
+*| |   \___ \  | | (_) | '_ \ 
+*| |___ ___) | | |\__, | (_) |
+* \____|____/  |_|  /_/ \___/ 
+*
+*
+*
+* There are issues in this code
 * Identify the reasons why the code below is printing the wrong output
 * Fix the code to print the correct output!
 * correct output:"This is the first part, this is the second part, and this is the third part"
@@ -14,7 +25,7 @@ using namespace std;
 
 
 int main() {
-	//variable declarations
+
 	string str1 = "This is the first part, ";
 	string temp = "this is the second part, ";
 	string str2 = temp;

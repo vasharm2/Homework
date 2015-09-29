@@ -21,13 +21,22 @@ using namespace std;
 * Correct Output: "This is the correct output!"
 * DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
 * you want to make setString do what it is intended to do.
+* reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
 void setString(string &address2, string &address3) {
-    address2  = address3;
-    return;
+	address2 = address3;
+	return;
 }
+
+
+
+
+
+
+
+
 
 
 
