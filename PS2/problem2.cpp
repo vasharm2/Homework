@@ -41,14 +41,34 @@ http://www.cplusplus.com/reference/cmath/pow/
 */
 
 #include <iostream>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+using namespace std;
+#include <tgmath.h>
+=======
+>>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
 #include <math.h>
 
 using namespace std;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
+>>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
 int main() {
     for (int i = 0; i < 3; i++) {
         for (int j = 3; j > 0; j--) {
             cout << pow(i, j) << endl;
         }
     }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
+>>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597

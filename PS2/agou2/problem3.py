@@ -28,8 +28,5 @@ def printStatement(times, foo):
             j = j + 1
         print('')
         i = i + 1
-<<<<<<< HEAD
 
-=======
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
 printStatement(3, ['C','S','1','9','6'])

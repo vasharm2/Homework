@@ -7,20 +7,14 @@ import java.util.*;
 | |   \___ \  | | (_) | '_ \
 | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/
-
 Problem Set 2
 Problem 4
-
 This program causes something called an infinite loop. This means that the
 program never ends because of a logical error.
-
 Use eclipse for this problem
-
 Why doesn't this program stop running/print the correct number of statements?
 There are three logical issues to address.
-
 This program should print the following when done:
-
 This sentence should print 5 times.
 This sentence should print 5 times.
 This sentence should print 5 times.
@@ -33,18 +27,19 @@ This sentence should print 4 times.
 This sentence should print 4 times.
 This sentence should print 4 times.
 This sentence should print 4 times.
-
 ************************************************
+
+author: dbansal4
 */
 
-class Problem4 {
+class problem4 {
     public static void main(String[] args) {
         printFirstSentence();
         printSecondSentence();
         printThirdSentence();
     }
 
-    public static void printFirstSentence() {
+    public static void printFirstSentence() {   
         for(int i = 5; i > 0; i--) {
             System.out.println("This sentence should print 5 times.");
         }
@@ -59,17 +54,10 @@ class Problem4 {
     }
 
     public static void printThirdSentence() {
-<<<<<<< HEAD
-        for(int amount = 0; amount < 12; amount += 3) {
+        for(int amount = 0; amount < 12; amount++) {
             System.out.println("This sentence should print 4 times.");
-=======
-        for(int amount = 0; amount < 4; amount++) {
-<<<<<<< HEAD
-            System.out.println("This sentence should print 4 times.")
-=======
-            System.out.println("This sentence should print 4 times.");
->>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
+            if(amount == 3)
+                amount = 12;
         }
     }
 }

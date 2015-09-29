@@ -17,19 +17,15 @@ Should print:
 when correct
 ************************************************
 """
-
 def printStatement(times, foo):
     length = len(foo);
     i = 0
-    while i < times:
+    while (i < times):
         j = 0
-        while j < length:
-            print(foo[j]),
+        while (j < length):
+            print (foo[j], end=""), 
             j = j + 1
-        print('')
+            print(' ', end="")
         i = i + 1
-<<<<<<< HEAD
-
-=======
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
+        print("")
 printStatement(3, ['C','S','1','9','6'])

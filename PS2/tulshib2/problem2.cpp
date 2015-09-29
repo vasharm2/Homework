@@ -41,11 +41,8 @@ http://www.cplusplus.com/reference/cmath/pow/
 */
 
 #include <iostream>
-<<<<<<< HEAD
-=======
-
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
 #include <tgmath.h>
+
 using namespace std;
 
 int main() {
@@ -54,4 +51,5 @@ int main() {
             cout << pow(i, j) << endl;
         }
     }
+	return 0;
 }

@@ -43,13 +43,13 @@ class Problem4 {
         printSecondSentence();
         printThirdSentence();
     }
-
+    
     public static void printFirstSentence() {
         for(int i = 5; i > 0; i--) {
             System.out.println("This sentence should print 5 times.");
         }
     }
-
+    
     public static void printSecondSentence() {
         int i = 3;
         while(i > 0) {
@@ -57,19 +57,11 @@ class Problem4 {
             i--;
         }
     }
-
+    
     public static void printThirdSentence() {
-<<<<<<< HEAD
-        for(int amount = 0; amount < 12; amount += 3) {
-            System.out.println("This sentence should print 4 times.");
-=======
         for(int amount = 0; amount < 4; amount++) {
-<<<<<<< HEAD
-            System.out.println("This sentence should print 4 times.")
-=======
             System.out.println("This sentence should print 4 times.");
->>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
+            
         }
     }
 }
