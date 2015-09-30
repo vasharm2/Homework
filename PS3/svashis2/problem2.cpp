@@ -25,10 +25,16 @@ using namespace std;
 */	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
+//void setString(string *deststringptr, string *srcstringptr) {
+	//cout << "destination string before " << *deststringptr << endl;
+//	*deststringptr = *srcstringptr;
+	//cout << "destination string after " << *deststringptr << endl;
+//	return;
+//}
 void setString(string& address2, string& address3) {
-	address2.assign(address3);
+	address2 = address3;
+	return;
 }
-
 
 
 
@@ -47,7 +53,8 @@ int main() {
 	string *pointer1 = &address1;
 	string *pointer2 = &address2;
 	string *pointer3 = &address3;
-	setString(address2, address3); //See line 23
+	//setString(&address2, &address3); //See line 23
+	setString(address2, address3);
 	cout << address1 + address2 << endl;
 
 	return 0;
