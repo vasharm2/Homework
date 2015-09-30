@@ -45,16 +45,27 @@ class Problem4 {
     }
 
     public static void printFirstSentence() {
+<<<<<<< HEAD
         for(int i = 5; i > 0; i--) {
+=======
+        for(int i = 0; i < 5; i++) {
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
             System.out.println("This sentence should print 5 times.");
         }
     }
 
     public static void printSecondSentence() {
+<<<<<<< HEAD
         int i = 3;
         while(i > 0) {
             System.out.println("This sentence should print 3 times.");
             i--;
+=======
+        int i = 0;
+        while(i < 3) {
+            System.out.println("This sentence should print 3 times.");
+            i++;
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
         }
     }
 
@@ -64,3 +75,7 @@ class Problem4 {
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
