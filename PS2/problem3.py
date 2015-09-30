@@ -19,27 +19,8 @@ when correct
 """
 
 def printStatement(times, foo):
-<<<<<<< HEAD
-    i=0
-    while(i < times):
-        j = 0
-        while(j < len(foo)):
-            print(foo[j]),
-            j = j + 1
-        print("\n"),
-        i = i + 1
-printStatement(3, ['C','S','1','9','6'])
-=======
     length = len(foo);
 <<<<<<< HEAD
-    i = 0
-    j = 2
-    while i < times:
-        while j < length:
-            print(' '.join(foo))
-            j = j + 1
-        i = i + 1
-=======
     output = "'"
     for ii in range(0, length):
     	output += foo[ii]
@@ -50,7 +31,16 @@ printStatement(3, ['C','S','1','9','6'])
     while i < times:
     	print(output)
     	i += 1
->>>>>>> f64eb7c78787c358fd6dd350c72b688fae38e5a8
+=======
+    i = 0
+    while i < times:
+        j = 0
+        print("'", end="")
+        while j < length:
+            print(foo[j], end=" ")
+            j = j + 1
+        print("\b'"),
+        i += 1
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
 
 printStatement(3, ['C','S','1','9','6'])
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
