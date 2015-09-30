@@ -49,13 +49,6 @@ int main() {
 	pointer3 = pointer2;
 	*pointer2 = address2;
 
-
-
-
-
-
-
-
 	cout << *pointer1 + *pointer2 << endl;
 
 	return 0;
