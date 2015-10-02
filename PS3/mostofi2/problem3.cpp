@@ -46,19 +46,7 @@ int main() {
 
 	swap(address2, address3);
 	pointer3 = pointer2;
-	// address3 = address2;
-	*pointer2 = address3;
-	// pointer2 = &address3;
-	// swap(pointer2, pointer3);
-
-
-
-
-	cout << address2 << endl;
-	cout << address3 << endl;
-	cout << *&pointer2 << endl;
-	cout << &pointer3 << endl;
-	cout << "*pointer2 " + *pointer2 << endl;
+	*pointer2 = address2;
 
 
 	cout << *pointer1 + *pointer2 << endl;
