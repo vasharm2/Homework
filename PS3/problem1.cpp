@@ -27,9 +27,9 @@ using namespace std;
 int main() {
 	variable declarations
 	
-	string 1st;
+	string first;
 	string *str1;
-	str1 = &1st;
+	str1 = &first;
 	*str1 = "This is the first part, ";
 	
 	string temp = "this is the second part, ";
