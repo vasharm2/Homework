@@ -25,7 +25,7 @@ using namespace std;
 */	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
-void setString(string address2, string address3) {
+void setString(string &address2, string address3) {
 	address2 = address3;
 	return;
 }
