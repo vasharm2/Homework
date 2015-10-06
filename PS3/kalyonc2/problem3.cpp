@@ -44,11 +44,9 @@ int main() {
 	* you want to make setString do what it is intended to do.
 	*/
 
-
-	swap(pointer2, pointer3);
-	pointer3 = pointer2;
-	*pointer2 = address3;
-
+	swap(address2, address3);
+	*pointer3 = *pointer2;
+	pointer2 = &address3;
 
 
 
@@ -56,7 +54,8 @@ int main() {
 
 
 
-	cout << *pointer1 + *pointer2 << endl;
 
+	cout << *pointer1 + *pointer2<< endl;
+	scanf(" ");
 	return 0;
 }

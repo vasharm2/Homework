@@ -23,6 +23,9 @@ using namespace std;
 * reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
 
+// void swap(string &a2, string &a3) {
+// 	a2 = a3;
+// }
 
 int main() {
 	//variable declarations
@@ -44,8 +47,8 @@ int main() {
 	* you want to make setString do what it is intended to do.
 	*/
 
-
-	swap(pointer2, pointer3);
+	swap(address2, address3);
+	swap(address2, address3);
 	pointer3 = pointer2;
 	*pointer2 = address3;
 

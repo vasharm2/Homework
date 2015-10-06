@@ -44,12 +44,11 @@ int main() {
 	* you want to make setString do what it is intended to do.
 	*/
 
-
-	swap(pointer2, pointer3);
-	pointer3 = pointer2;
-	*pointer2 = address3;
-
-
+    
+    swap(address2, address3); //address3 = "incorrect.." and address2 = "correct..."
+    swap(address2, address3); //address3 = "correct.." and address2 = "incorrect..."
+	pointer3 = pointer2;    //pointer3 points at address2
+	*pointer2 = address3;   //the value pointed to by pointer2 (address2) is changed to the value of address3
 
 
 
