@@ -23,6 +23,10 @@ using namespace std;
 * reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
 
+void swap (string address2, string address3)
+{
+	;
+}
 
 int main() {
 	//variable declarations
@@ -47,7 +51,14 @@ int main() {
 
 	swap(address2, address3);
 	pointer3 = pointer2;
-	*pointer2 = address2;
+	*pointer2 = address3;
+
+
+
+
+
+
+
 
 	cout << *pointer1 + *pointer2 << endl;
 

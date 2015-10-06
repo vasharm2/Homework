@@ -43,13 +43,16 @@ int main() {
 	* DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
 	* you want to make setString do what it is intended to do.
 	*/
-
-
+	
+	
 	swap(address2, address3);
 	pointer3 = pointer2;
-	*pointer2 = address2;
+	swap(address3,address2);
+	*pointer2 = address3;
+
 
 	cout << *pointer1 + *pointer2 << endl;
 
+	
 	return 0;
 }

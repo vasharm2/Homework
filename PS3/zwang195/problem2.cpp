@@ -17,11 +17,23 @@ using namespace std;
 * There is an issue in this code
 * Identify the reasons why the code below is printing the wrong output
 * Devise an addition to the existing code to fix the problem
-* Correct output" "This is the correct output!"
 * (no deleting any of the current code!)
-* DO NOT SIMPLY ASSIGN POINTER1 AND POINTER2 TO THE CORRECT VALUES
+* Correct Output: "This is the correct output!"
+* DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
+* you want to make setString do what it is intended to do.
 * reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
 */	
+
+//YOU CAN ONLY CHANGE THIS FUNCTION
+void setString(string &address1, string &address2) {
+	address1 = address2;
+	return;
+}
+	
+
+
+
+
 
 
 int main() {
@@ -32,24 +44,8 @@ int main() {
 	string *pointer1 = &address1;
 	string *pointer2 = &address2;
 	string *pointer3 = &address3;
-
-	/*
-	*
-	*
-	* There is an issue in the code below.
-	* Identify the reasons why the code below is printing the wrong output
-	* Devise an addition to the existing code to fix the problem
-	* (no deleting any of the current code!)
-	* DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
-	* you want to make setString do what it is intended to do.
-	*/
-
-
-	swap(address2, address3);
-	pointer3 = pointer2;
-	*pointer2 = address2;
-
-	cout << *pointer1 + *pointer2 << endl;
+	setString(address2, address3); //See line 23
+	cout << address1 + address2 << endl;
 
 	return 0;
 }

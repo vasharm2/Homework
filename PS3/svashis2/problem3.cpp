@@ -44,10 +44,15 @@ int main() {
 	* you want to make setString do what it is intended to do.
 	*/
 
+	//cout << " address2 = " << address2  << " address3 = " << address3 << endl;
 
 	swap(address2, address3);
+	//cout << "after address2 = " << address2  << "after address3 = " << address3 << endl;
 	pointer3 = pointer2;
-	*pointer2 = address2;
+	//cout << "after2 address2 = " << address2  << "after address3 = " << address3 << endl;
+	//cout << "after3 pointer2 = " << pointer2  << "after pointer3 = " << pointer3 << endl;
+	//cout << "after4 *pointer2 = " << *pointer2  << "after *pointer3 = " << *pointer3 << endl;
+	//*pointer2 = address3;
 
 	cout << *pointer1 + *pointer2 << endl;
 
