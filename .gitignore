@@ -5,6 +5,7 @@
 .DS_Store
 
 # ide ignores
+.metadata
 .idea
 .classpath
 .project
