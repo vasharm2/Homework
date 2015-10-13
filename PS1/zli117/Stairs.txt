@@ -1,0 +1,10 @@
+4
+
+3
+4
+5
+<<<<<<< HEAD:PS1/zli117/Stairs.txt
+6	
+=======
+-1
+>>>>>>> a1f6a74f22cc0367d59265795c3586fdb3629e72:PS1/hhuang74/Stairs.txt
