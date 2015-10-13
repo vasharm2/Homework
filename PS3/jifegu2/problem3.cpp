@@ -6,19 +6,11 @@ using namespace std;
 
 /*
 *
-<<<<<<< HEAD
 *  ____ ____    _  ___   __
 * / ___/ ___|  / |/ _ \ / /_
 *| |   \___ \  | | (_) | '_ \
 *| |___ ___) | | |\__, | (_) |
 * \____|____/  |_|  /_/ \___/
-=======
-*  ____ ____    _  ___   __   
-* / ___/ ___|  / |/ _ \ / /_  
-*| |   \___ \  | | (_) | '_ \ 
-*| |___ ___) | | |\__, | (_) |
-* \____|____/  |_|  /_/ \___/ 
->>>>>>> 2a85dd17495d4178e7126fd158f89c3638ce55c1
 *
 *
 *
@@ -29,11 +21,7 @@ using namespace std;
 * (no deleting any of the current code!)
 * DO NOT SIMPLY ASSIGN POINTER1 AND POINTER2 TO THE CORRECT VALUES
 * reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
-<<<<<<< HEAD
 */
-=======
-*/	
->>>>>>> 2a85dd17495d4178e7126fd158f89c3638ce55c1
 
 
 int main() {
@@ -59,11 +47,7 @@ int main() {
 
 	swap(address2, address3);
 	pointer3 = pointer2;
-<<<<<<< HEAD
 	*pointer2 = address2;
-=======
-	*pointer2 = address3;
->>>>>>> 2a85dd17495d4178e7126fd158f89c3638ce55c1
 
 
 
