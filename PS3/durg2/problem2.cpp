@@ -6,11 +6,11 @@ using namespace std;
 
 /*
 *
-*  ____ ____    _  ___   __
-* / ___/ ___|  / |/ _ \ / /_
-*| |   \___ \  | | (_) | '_ \
+*  ____ ____    _  ___   __   
+* / ___/ ___|  / |/ _ \ / /_  
+*| |   \___ \  | | (_) | '_ \ 
 *| |___ ___) | | |\__, | (_) |
-* \____|____/  |_|  /_/ \___/
+* \____|____/  |_|  /_/ \___/ 
 *
 *
 *
@@ -21,13 +21,12 @@ using namespace std;
 * Correct Output: "This is the correct output!"
 * DO NOT SIMPLY ASSIGN ADDRESS1 AND ADDRESS2 TO THE CORRECT VALUES
 * you want to make setString do what it is intended to do.
-*/
+* reference http://www.cplusplus.com/doc/tutorial/pointers/ for additional information on pointers!
+*/	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
-void setString(string &address2, string address3) {
-	//cout<<address2<<endl;
-    address2=address3;
-    //cout<<address2<<endl;
+void setString(string &address2, string &address3) {
+	address2 = address3;
 	return;
 }
 
@@ -49,9 +48,9 @@ int main() {
 	string *pointer1 = &address1;
 	string *pointer2 = &address2;
 	string *pointer3 = &address3;
-	setString(address2, address3);
-    //See line 23
+	setString(address2, address3); //See line 23
 	cout << address1 + address2 << endl;
 
 	return 0;
 }
+
