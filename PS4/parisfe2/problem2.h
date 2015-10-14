@@ -1,5 +1,5 @@
 class problem2 {
 public:
-	int printQuestion2();
-	int printAnswer2();
+	void printQuestion2();
+	void printAnswer2();
 };
