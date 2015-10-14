@@ -3,7 +3,7 @@
 #include "problem2.cpp"
 #include "problem3question.h"
 #include "problem3answer.h"
-
+#include "problem3help.h"
 int main() {
 
 	//function calls from the other problem files! you should not need to modify this
