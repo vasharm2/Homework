@@ -1,6 +1,8 @@
+#ifndef P3HELP
+#define P3HELP
+
 
 #include <string>
-
 
 class problem3help {
 	public:
@@ -15,3 +17,5 @@ std::string problem3help::printQuestion() {
 std::string problem3help::printAnswer() {
 	return "This is the answer for problem 3!";
 }
+
+#endif
