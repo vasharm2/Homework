@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 # Homework
 Homework for students
 
 You can do the Problem Sets in whatever language you wish. Templates will be provided for Java, C++, and Python! (WIP, coming soon)
 
-### Make sure you follow the submission instructions located [here](https://github.com/CS196Illinois/Submissions/blob/master/README.md)
+### Make sure you follow the submission instructions located [here](https://github.com/CS196Illinois/Submissions/blob/submission/README.md)
 
 If you've already cloned this repository locally and want to update the repository to get new code from this repository, run the command:
 
@@ -59,8 +58,6 @@ Submissions<br />
 <<<<<<< HEAD
 8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
 =======
->>>>>>> 5edd6c7553a89f2596f5e3746d02fce50a855597
->>>>>>> db62a3241a4fc943be1dbc64dcf5c00a46e5639f
 9. Following that (in the same directory), add your changes files to be staged for a commit, and commit your changes:
 ```git add [FILE]``` and then a 
 ```git commit -m "PSET submission"```
@@ -74,4 +71,3 @@ Repeat steps 10 through 15 for subsequent PSets!
 SEE EXAMPLE ENTRY IN PS1 for SUBMISSION FORMAT!!!
 
 #### WE UNDERSTAND THAT GIT IS VERY DIFFICULT TO PICK UP INITIALLY. IF YOU HAVE ANY TROUBLE OR HAVE ANY QUESTIONS, PLEASE FEEL TO CONTACT YOUR CA, COME TO HACKERSPACE, OR SEND AN EMAIL TO cs196-instructors@illinois.edu, OR FIND Aravind Sundaresan (sundrsn2@illinois.edu) OR Naren Dasan (sivagna2@illinois.edu) THROUGH WHATEVER FORMAT IS MOST CONVENIENT
->>>>>>> b00a1c31c8107f96ad0a75273a5e6b87b63cb6be
