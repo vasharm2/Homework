@@ -1,4 +1,7 @@
 
+#ifndef PROB_3_H
+#define PROB_3_H
+
 #include <string>
 
 
@@ -15,3 +18,4 @@ std::string problem3help::printQuestion() {
 std::string problem3help::printAnswer() {
 	return "This is the answer for problem 3!";
 }
+#endif
