@@ -52,5 +52,10 @@ int main() {
             cout << "I hate my startup." << endl;
             printSecondary();
         }
+    }
+<<<<<<< HEAD
 }
+=======
 }
+
+>>>>>>> a7bb04f9623d9560ffd828c9847973fbac1570ee
