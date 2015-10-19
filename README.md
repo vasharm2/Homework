@@ -1,3 +1,16 @@
+# Homework
+Homework for students
+
+You can do the Problem Sets in whatever language you wish. Templates will be provided for Java, C++, and Python! (WIP, coming soon)
+
+### Make sure you follow the submission instructions located [here](https://github.com/CS196Illinois/Submissions/blob/submission/README.md)
+
+If you've already cloned this repository locally and want to update the repository to get new code from this repository, run the command:
+
+`git pull`
+
+to pull in the latest files.
+=======
 # Submissions
 This is where you submit your code. We understand and accept the fact that you can see everyone else's submissions. We are not going to do anything to prevent you from cheating. Keep in mind that this is an Honors course, meant for enriching your knowledge. You gain absolutely nothing from cheating.
 
@@ -39,6 +52,12 @@ Submissions<br />
 └── README.md<br />
 ... etc
 6. Solve the problems!!!
+<<<<<<< HEAD
+8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
+=======
+<<<<<<< HEAD
+8. When you are ready to submit, type into console, (after making sure you are in the proper the directory) and only for the first time run: ```git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/submissions```
+=======
 9. Following that (in the same directory), add your changes files to be staged for a commit, and commit your changes:
 ```git add [FILE]``` and then a 
 ```git commit -m "PSET submission"```
