@@ -58,10 +58,14 @@ int main() {
 
 
 	swap(address2, address3);
+<<<<<<< HEAD
+	*pointer3 = *pointer2;
+=======
 	pointer3 = pointer2;
 <<<<<<< HEAD
 	*pointer2 = address2;
 =======
+>>>>>>> 70038e9dd6b82188924f4f2bbf62bf28bbaf77df
 	*pointer2 = address3;
 >>>>>>> 2a85dd17495d4178e7126fd158f89c3638ce55c1
 
