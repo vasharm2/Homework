@@ -1,0 +1,20 @@
+# merge tool ignores
+.gitignore.orig
+
+# osx ignores
+.DS_Store
+
+# ide ignores
+.metadata
+.idea
+.classpath
+.project
+/bin/
+
+# language ignores
+*.class
+*.pyc
+*.out
+
+# local setup
+Homework
