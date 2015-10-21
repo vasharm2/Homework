@@ -45,6 +45,8 @@ int main() {
     
     
     swap(address2, address3);
+
+    // This sets the pointers to the correct addresses
     pointer3 = pointer2;
     pointer2 = &address2;
     cout << *pointer1 + *pointer2 << endl;
