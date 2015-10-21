@@ -43,7 +43,7 @@ void setString(string &address2, string address3) {
 */	
 
 //YOU CAN ONLY CHANGE THIS FUNCTION
-void setString(string address2, string address3) {
+void setString(string &address2, string &address3) {
 	address2 = address3;
 	return;
 >>>>>>> 2a85dd17495d4178e7126fd158f89c3638ce55c1
