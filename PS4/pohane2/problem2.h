@@ -1,3 +1,5 @@
+#include <iostream>
+
 class problem2 {
 public:
 	void printQuestion2();

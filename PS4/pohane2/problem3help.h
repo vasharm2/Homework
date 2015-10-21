@@ -1,7 +1,6 @@
 #include <string>
-
-#ifndef PROBLEM3HELP_H
-#define PROBLEM3HELP_H
+#ifndef __X_H_INCLUDED__
+#define __X_H_INCLUDED__
 
 class problem3help {
 	public:
