@@ -1,6 +1,7 @@
 
 #include <string>
-
+#ifndef PROBLEM3
+#define PROBLEM3
 
 class problem3help {
 	public:
