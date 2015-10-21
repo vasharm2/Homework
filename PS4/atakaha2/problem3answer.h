@@ -1,6 +1,3 @@
-#ifndef PROBLEM3ANSWER_H
-#define PROBLEM3ANSWER_H
-
 #include <iostream>
 #include "problem3help.h"
 
@@ -14,4 +11,3 @@ void problem3answer::printAnswer3() {
 	problem3help a;
 	std::cout << a.printAnswer() << std::endl;
 }
-#endif
