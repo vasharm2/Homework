@@ -1,8 +1,4 @@
 //main function.
-<<<<<<< HEAD
-=======
-
->>>>>>> 76d7b1ada5a64f7a25687a3af1b0b11000339602
 #include "problem1.h"
 #include "problem2.h"
 #include "problem3question.h"
@@ -22,8 +18,4 @@ int main() {
 	c.printQuestion3();
 	d.printAnswer3();
 	return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 76d7b1ada5a64f7a25687a3af1b0b11000339602
