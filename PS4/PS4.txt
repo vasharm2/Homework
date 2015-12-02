@@ -1,10 +1,18 @@
 For a brush-up on include statements, please visit http://www.cplusplus.com/forum/articles/10627/
 
+<<<<<<< HEAD
   ____ ____    _  ___   __   
  / ___/ ___|  / |/ _ \ / /_  
 | |   \___ \  | | (_) | '_ \ 
 | |___ ___) | | |\__, | (_) |
  \____|____/  |_|  /_/ \___/ 
+=======
+  ____ ____    _  ___   __
+ / ___/ ___|  / |/ _ \ / /_
+| |   \___ \  | | (_) | '_ \
+| |___ ___) | | |\__, | (_) |
+ \____|____/  |_|  /_/ \___/
+>>>>>>> 72c1077c6c56b523e10283cb7fe3a1101b6cfc1e
 
 HOW TO RUN YOUR CODE:
 clang++ main.cpp problem1.cpp problem2.cpp
@@ -19,10 +27,17 @@ To correctly create a problem1 object, we want our main to know that the file ex
 appropriate header file in main.cpp! Create the header file for problem1, and include it in the main.cpp. Be sure to include
 the problem1 header file (.h) in the problem1 source file (.cpp).
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 72c1077c6c56b523e10283cb7fe3a1101b6cfc1e
 Problem 2:
 Remember to include any header files for classes you'll be using in main! In problem2, there is something wrong with your header
 file. Remember that the functions defined in your header file are prototypes for the functions defined in the source (.cpp) file.
 
 Problem 3:
+<<<<<<< HEAD
 Here, we have an issue with problem3help being included twice. Add include guards where appropriate!
+=======
+Here, we have an issue with problem3help being included twice. Add include guards where appropriate!
+>>>>>>> 72c1077c6c56b523e10283cb7fe3a1101b6cfc1e
